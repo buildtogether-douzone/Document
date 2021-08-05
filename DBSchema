@@ -1,0 +1,46 @@
+-- ucare."user" definition
+
+-- Drop table
+
+-- DROP TABLE ucare."user";
+
+CREATE TABLE ucare."user" (
+	user_seq bigserial NOT NULL, -- 유저번호
+	id varchar(50) NOT NULL, -- ID
+	"password" varchar(200) NOT NULL, -- 비밀번호
+	"name" varchar(50) NOT NULL, -- 이름
+	gender varchar(10) NOT NULL, -- 성별
+	ssn varchar(100) NOT NULL, -- 주민등록번호
+	address varchar(200) NOT NULL, -- 주소
+	phone_num varchar(100) NOT NULL, -- 연락처
+	"role" varchar(100) NOT NULL, -- 직급
+	remark text NULL, -- 비고
+	ins_seq varchar(100) NOT NULL, -- 입력자
+	ins_date date NOT NULL, -- 입력일자
+	upt_seq varchar(100) NOT NULL, -- 수정자
+	upt_date date NOT NULL, -- 수정일자
+	CONSTRAINT user_pkey PRIMARY KEY (user_seq)
+);
+
+-- Column comments
+
+COMMENT ON COLUMN ucare."user".user_seq IS '유저번호';
+COMMENT ON COLUMN ucare."user".id IS 'ID';
+COMMENT ON COLUMN ucare."user"."password" IS '비밀번호';
+COMMENT ON COLUMN ucare."user"."name" IS '이름';
+COMMENT ON COLUMN ucare."user".gender IS '성별';
+COMMENT ON COLUMN ucare."user".ssn IS '주민등록번호';
+COMMENT ON COLUMN ucare."user".address IS '주소';
+COMMENT ON COLUMN ucare."user".phone_num IS '연락처';
+COMMENT ON COLUMN ucare."user"."role" IS '직급';
+COMMENT ON COLUMN ucare."user".remark IS '비고';
+COMMENT ON COLUMN ucare."user".ins_seq IS '입력자';
+COMMENT ON COLUMN ucare."user".ins_date IS '입력일자';
+COMMENT ON COLUMN ucare."user".upt_seq IS '수정자';
+COMMENT ON COLUMN ucare."user".upt_date IS '수정일자';
+
+-- Permissions
+
+ALTER TABLE ucare."user" OWNER TO postgres;
+GRANT ALL ON TABLE ucare."user" TO postgres;
+
