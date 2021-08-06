@@ -38,3 +38,89 @@ ALTER TABLE ucare."user" OWNER TO postgres;
 GRANT ALL ON TABLE ucare."user" TO postgres;
 
 ==================================================================================================
+-- ucare.diagnosis definition
+
+-- Drop table
+
+-- DROP TABLE ucare.diagnosis;
+
+CREATE TABLE ucare.diagnosis (
+	diagnosis_no bigserial NOT NULL, -- 진료번호
+	diagnosis_memo text NOT NULL, -- 진료메모
+	cure_yn varchar(50) NOT NULL, -- 치료여부
+	diagnosis_dt date NOT NULL, -- 진료날짜
+	ins_dt date NOT NULL, -- 입력일자
+	upt_no varchar(50) NOT NULL, -- 수정자
+	upt_dt date NOT NULL, -- 수정일자
+	remark text NULL, -- 비고
+	CONSTRAINT diagnosis_pkey PRIMARY KEY (diagnosis_no)
+);
+
+-- Column comments
+
+COMMENT ON COLUMN ucare.diagnosis.diagnosis_no IS '진료번호';
+COMMENT ON COLUMN ucare.diagnosis.diagnosis_memo IS '진료메모';
+COMMENT ON COLUMN ucare.diagnosis.cure_yn IS '치료여부';
+COMMENT ON COLUMN ucare.diagnosis.diagnosis_dt IS '진료날짜';
+COMMENT ON COLUMN ucare.diagnosis.ins_dt IS '입력일자';
+COMMENT ON COLUMN ucare.diagnosis.upt_no IS '수정자';
+COMMENT ON COLUMN ucare.diagnosis.upt_dt IS '수정일자';
+COMMENT ON COLUMN ucare.diagnosis.remark IS '비고';
+
+-- Permissions
+
+ALTER TABLE ucare.diagnosis OWNER TO postgres;
+GRANT ALL ON TABLE ucare.diagnosis TO postgres;
+
+==================================================================================================
+-- ucare.medicine definition
+
+-- Drop table
+
+-- DROP TABLE ucare.medicine;
+
+CREATE TABLE ucare.medicine (
+	medicine_no bigserial NOT NULL, -- 약품코드
+	medicine_nm varchar(100) NOT NULL, -- 약품명
+	symptom text NOT NULL, -- 임상증상
+	generic varchar(100) NOT NULL, -- 제네릭
+	price int4 NOT NULL, -- 가격
+	maker varchar(100) NULL, -- 제조사
+	CONSTRAINT medicine_pkey PRIMARY KEY (medicine_no)
+);
+
+-- Column comments
+
+COMMENT ON COLUMN ucare.medicine.medicine_no IS '약품코드';
+COMMENT ON COLUMN ucare.medicine.medicine_nm IS '약품명';
+COMMENT ON COLUMN ucare.medicine.symptom IS '임상증상';
+COMMENT ON COLUMN ucare.medicine.generic IS '제네릭';
+COMMENT ON COLUMN ucare.medicine.price IS '가격';
+COMMENT ON COLUMN ucare.medicine.maker IS '제조사';
+
+-- Permissions
+
+ALTER TABLE ucare.medicine OWNER TO postgres;
+GRANT ALL ON TABLE ucare.medicine TO postgres;
+
+==================================================================================================
+-- ucare.prescription definition
+
+-- Drop table
+
+-- DROP TABLE ucare.prescription;
+
+CREATE TABLE ucare.prescription (
+	prescription_no bigserial NOT NULL, -- 처방코드
+	CONSTRAINT prescription_pkey PRIMARY KEY (prescription_no)
+);
+
+-- Column comments
+
+COMMENT ON COLUMN ucare.prescription.prescription_no IS '처방코드';
+
+-- Permissions
+
+ALTER TABLE ucare.prescription OWNER TO postgres;
+GRANT ALL ON TABLE ucare.prescription TO postgres;
+==================================================================================================
