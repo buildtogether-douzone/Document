@@ -124,3 +124,70 @@ COMMENT ON COLUMN ucare.prescription.prescription_no IS '처방코드';
 ALTER TABLE ucare.prescription OWNER TO postgres;
 GRANT ALL ON TABLE ucare.prescription TO postgres;
 ==================================================================================================
+-- ucare.disease definition
+
+-- Drop table
+
+-- DROP TABLE ucare.disease;
+
+CREATE TABLE ucare.disease (
+	disease_no bigserial NOT NULL, -- 질병코드
+	disease_nm varchar(100) NOT NULL, -- 병명
+	symptom varchar(200) NOT NULL, -- 증상
+	CONSTRAINT disease_pkey PRIMARY KEY (disease_no)
+);
+
+-- Column comments
+
+COMMENT ON COLUMN ucare.disease.disease_no IS '질병코드';
+COMMENT ON COLUMN ucare.disease.disease_nm IS '병명';
+COMMENT ON COLUMN ucare.disease.symptom IS '증상';
+
+-- Permissions
+
+ALTER TABLE ucare.disease OWNER TO postgres;
+GRANT ALL ON TABLE ucare.disease TO postgres;
+
+==================================================================================================
+-- ucare.receipt definition
+
+-- Drop table
+
+-- DROP TABLE ucare.receipt;
+
+CREATE TABLE ucare.receipt (
+	receipt_no bigserial NOT NULL, -- 접수번호
+	patient_no varchar(50) NOT NULL,
+	receipt_dt date NOT NULL, -- 접수날짜
+	receipt_time time NOT NULL, -- 접수시간
+	accept_yn varchar(5) NOT NULL, -- 수납여부
+	remark text NULL, -- 비고
+	bp int4 NOT NULL, -- 혈압
+	bs int4 NOT NULL, -- 혈당
+	user_no varchar(100) NOT NULL, -- 입력자
+	ins_dt timestamp NULL, -- 입력일자
+	upt_no varchar(50) NULL, -- 수정자
+	upt_dt timestamp NULL, -- 수정일자
+	CONSTRAINT receipt_pkey PRIMARY KEY (receipt_no)
+);
+
+-- Column comments
+
+COMMENT ON COLUMN ucare.receipt.receipt_no IS '접수번호';
+COMMENT ON COLUMN ucare.receipt.receipt_dt IS '접수날짜';
+COMMENT ON COLUMN ucare.receipt.receipt_time IS '접수시간';
+COMMENT ON COLUMN ucare.receipt.accept_yn IS '수납여부';
+COMMENT ON COLUMN ucare.receipt.remark IS '비고';
+COMMENT ON COLUMN ucare.receipt.bp IS '혈압';
+COMMENT ON COLUMN ucare.receipt.bs IS '혈당';
+COMMENT ON COLUMN ucare.receipt.user_no IS '입력자';
+COMMENT ON COLUMN ucare.receipt.ins_dt IS '입력일자';
+COMMENT ON COLUMN ucare.receipt.upt_no IS '수정자';
+COMMENT ON COLUMN ucare.receipt.upt_dt IS '수정일자';
+
+-- Permissions
+
+ALTER TABLE ucare.receipt OWNER TO postgres;
+GRANT ALL ON TABLE ucare.receipt TO postgres;
+
+==================================================================================================
