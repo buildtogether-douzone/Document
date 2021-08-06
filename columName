@@ -1,0 +1,70 @@
+patient
+- patient_no
+- name
+- gender
+- ssn
+- insurance
+- tel_no
+- address
+- diagnosis_type
+- visit_date
+- remark(TEXT)
+- user_no 
+- ins_dt
+- upt_no
+- upt_dt
+- height
+- weight
+
+receipt
+- receipt_no
+- patient_no
+- receipt_dt
+- receipt_time
+- accept_yn
+- remark(TEXT)
+- bp
+- bs
+- user_no 
+- ins_dt
+- upt_no
+- upt_dt
+
+diagnosis
+- diagnosis_no
+- receipt_no
+- diagnosis_memo
+- cure_yn
+- diagnosis_dt
+- remark(TEXT)
+- user_no 
+- ins_dt
+- upt_no
+- upt_dt
+- disease_no
+
+disease
+- disease_no
+- disease_nm
+- symptom
+
+prescription
+- prescription_no
+- medicine_no
+- diagnosis_no
+
+medicine
+- medicine_no
+- medicine_nm
+- symptom
+- generic
+- price
+- maker
+
+hospital
+- hospital_no
+- hospital_nm
+- head_nm
+- address
+- tel_no
+- basic_price
