@@ -1,3 +1,261 @@
+-- ucare.diagnosis definition
+
+-- Drop table
+
+-- DROP TABLE ucare.diagnosis;
+
+CREATE TABLE ucare.diagnosis (
+	diagnosis_no bigserial NOT NULL, -- 진료번호
+	diagnosis_memo text NOT NULL, -- 진료메모
+	cure_yn varchar(50) NOT NULL, -- 치료여부
+	diagnosis_dt date NOT NULL, -- 진료날짜
+	ins_dt date NOT NULL, -- 입력일자
+	upt_no varchar(50) NOT NULL, -- 수정자
+	upt_dt date NOT NULL, -- 수정일자
+	remark text NULL, -- 비고
+	user_no int8 NULL,
+	receipt_no int8 NULL,
+	disease_no int8 NULL,
+	CONSTRAINT diagnosis_pkey PRIMARY KEY (diagnosis_no)
+);
+
+-- Column comments
+
+COMMENT ON COLUMN ucare.diagnosis.diagnosis_no IS '진료번호';
+COMMENT ON COLUMN ucare.diagnosis.diagnosis_memo IS '진료메모';
+COMMENT ON COLUMN ucare.diagnosis.cure_yn IS '치료여부';
+COMMENT ON COLUMN ucare.diagnosis.diagnosis_dt IS '진료날짜';
+COMMENT ON COLUMN ucare.diagnosis.ins_dt IS '입력일자';
+COMMENT ON COLUMN ucare.diagnosis.upt_no IS '수정자';
+COMMENT ON COLUMN ucare.diagnosis.upt_dt IS '수정일자';
+COMMENT ON COLUMN ucare.diagnosis.remark IS '비고';
+
+-- Permissions
+
+ALTER TABLE ucare.diagnosis OWNER TO postgres;
+GRANT ALL ON TABLE ucare.diagnosis TO postgres;
+
+
+-- ucare.diagnosis foreign keys
+
+ALTER TABLE ucare.diagnosis ADD CONSTRAINT disease FOREIGN KEY (disease_no) REFERENCES ucare.disease(disease_no);
+ALTER TABLE ucare.diagnosis ADD CONSTRAINT receipt FOREIGN KEY (receipt_no) REFERENCES ucare.receipt(receipt_no);
+ALTER TABLE ucare.diagnosis ADD CONSTRAINT "user" FOREIGN KEY (user_no) REFERENCES ucare."user"(user_no);
+
+----------------------------------------------------------------------------------------------------------------------------------------
+-- ucare.disease definition
+
+-- Drop table
+
+-- DROP TABLE ucare.disease;
+
+CREATE TABLE ucare.disease (
+	disease_no bigserial NOT NULL, -- 질병코드
+	disease_nm varchar(100) NOT NULL, -- 병명
+	symptom varchar(200) NOT NULL, -- 증상
+	CONSTRAINT disease_pkey PRIMARY KEY (disease_no)
+);
+
+-- Column comments
+
+COMMENT ON COLUMN ucare.disease.disease_no IS '질병코드';
+COMMENT ON COLUMN ucare.disease.disease_nm IS '병명';
+COMMENT ON COLUMN ucare.disease.symptom IS '증상';
+
+-- Permissions
+
+ALTER TABLE ucare.disease OWNER TO postgres;
+GRANT ALL ON TABLE ucare.disease TO postgres;
+----------------------------------------------------------------------------------------------------------------------------------------
+-- ucare.hospital definition
+
+-- Drop table
+
+-- DROP TABLE ucare.hospital;
+
+CREATE TABLE ucare.hospital (
+	hospital_no bigserial NOT NULL, -- 병원번호
+	hospital_nm varchar(50) NOT NULL, -- 병원명
+	head_nm varchar(50) NOT NULL, -- 병원장명
+	address varchar(200) NOT NULL, -- 주소
+	tel_no varchar(100) NOT NULL, -- 연락처
+	basic_price money NOT NULL, -- 기본진료비
+	CONSTRAINT hospital_pkey PRIMARY KEY (hospital_no)
+);
+
+-- Column comments
+
+COMMENT ON COLUMN ucare.hospital.hospital_no IS '병원번호';
+COMMENT ON COLUMN ucare.hospital.hospital_nm IS '병원명';
+COMMENT ON COLUMN ucare.hospital.head_nm IS '병원장명';
+COMMENT ON COLUMN ucare.hospital.address IS '주소';
+COMMENT ON COLUMN ucare.hospital.tel_no IS '연락처';
+COMMENT ON COLUMN ucare.hospital.basic_price IS '기본진료비';
+
+-- Permissions
+
+ALTER TABLE ucare.hospital OWNER TO postgres;
+GRANT ALL ON TABLE ucare.hospital TO postgres;
+----------------------------------------------------------------------------------------------------------------------------------------
+-- ucare.medicine definition
+
+-- Drop table
+
+-- DROP TABLE ucare.medicine;
+
+CREATE TABLE ucare.medicine (
+	medicine_no bigserial NOT NULL, -- 약품코드
+	medicine_nm varchar(100) NOT NULL, -- 약품명
+	symptom text NOT NULL, -- 임상증상
+	generic varchar(100) NOT NULL, -- 제네릭
+	price int4 NOT NULL, -- 가격
+	maker varchar(100) NULL, -- 제조사
+	CONSTRAINT medicine_pkey PRIMARY KEY (medicine_no)
+);
+
+-- Column comments
+
+COMMENT ON COLUMN ucare.medicine.medicine_no IS '약품코드';
+COMMENT ON COLUMN ucare.medicine.medicine_nm IS '약품명';
+COMMENT ON COLUMN ucare.medicine.symptom IS '임상증상';
+COMMENT ON COLUMN ucare.medicine.generic IS '제네릭';
+COMMENT ON COLUMN ucare.medicine.price IS '가격';
+COMMENT ON COLUMN ucare.medicine.maker IS '제조사';
+
+-- Permissions
+
+ALTER TABLE ucare.medicine OWNER TO postgres;
+GRANT ALL ON TABLE ucare.medicine TO postgres;
+----------------------------------------------------------------------------------------------------------------------------------------
+-- ucare.patient definition
+
+-- Drop table
+
+-- DROP TABLE ucare.patient;
+
+CREATE TABLE ucare.patient (
+	patient_no bigserial NOT NULL, -- 환자등록번호
+	"name" varchar(50) NOT NULL, -- 이름
+	gender varchar(10) NOT NULL, -- 성별
+	ssn varchar(100) NOT NULL, -- 주민등록번호
+	insurance_yn varchar(10) NOT NULL, -- 보험여부
+	tel_no varchar(100) NOT NULL, -- 연락처
+	address varchar(200) NOT NULL, -- 주소
+	diagnosis_type varchar(10) NOT NULL, -- 진료구분
+	visit_date date NOT NULL, -- 내원일
+	height varchar(10) NULL, -- 키
+	weight varchar(10) NULL, -- 몸무게
+	remark text NULL, -- 비고
+	ins_dt date NULL, -- 입력일자
+	upt_no int8 NULL, -- 수정자
+	upt_dt date NULL, -- 수정일자
+	user_no int8 NULL,
+	CONSTRAINT patient_pkey PRIMARY KEY (patient_no)
+);
+
+-- Column comments
+
+COMMENT ON COLUMN ucare.patient.patient_no IS '환자등록번호';
+COMMENT ON COLUMN ucare.patient."name" IS '이름';
+COMMENT ON COLUMN ucare.patient.gender IS '성별';
+COMMENT ON COLUMN ucare.patient.ssn IS '주민등록번호';
+COMMENT ON COLUMN ucare.patient.insurance_yn IS '보험여부';
+COMMENT ON COLUMN ucare.patient.tel_no IS '연락처';
+COMMENT ON COLUMN ucare.patient.address IS '주소';
+COMMENT ON COLUMN ucare.patient.diagnosis_type IS '진료구분';
+COMMENT ON COLUMN ucare.patient.visit_date IS '내원일';
+COMMENT ON COLUMN ucare.patient.height IS '키';
+COMMENT ON COLUMN ucare.patient.weight IS '몸무게';
+COMMENT ON COLUMN ucare.patient.remark IS '비고';
+COMMENT ON COLUMN ucare.patient.ins_dt IS '입력일자';
+COMMENT ON COLUMN ucare.patient.upt_no IS '수정자';
+COMMENT ON COLUMN ucare.patient.upt_dt IS '수정일자';
+
+-- Permissions
+
+ALTER TABLE ucare.patient OWNER TO postgres;
+GRANT ALL ON TABLE ucare.patient TO postgres;
+
+
+-- ucare.patient foreign keys
+
+ALTER TABLE ucare.patient ADD CONSTRAINT "user" FOREIGN KEY (user_no) REFERENCES ucare."user"(user_no);
+----------------------------------------------------------------------------------------------------------------------------------------
+-- ucare.prescription definition
+
+-- Drop table
+
+-- DROP TABLE ucare.prescription;
+
+CREATE TABLE ucare.prescription (
+	prescription_no bigserial NOT NULL, -- 처방코드
+	diagnosis_no int8 NULL,
+	medicine_no int8 NULL,
+	CONSTRAINT prescription_pkey PRIMARY KEY (prescription_no)
+);
+
+-- Column comments
+
+COMMENT ON COLUMN ucare.prescription.prescription_no IS '처방코드';
+
+-- Permissions
+
+ALTER TABLE ucare.prescription OWNER TO postgres;
+GRANT ALL ON TABLE ucare.prescription TO postgres;
+
+
+-- ucare.prescription foreign keys
+
+ALTER TABLE ucare.prescription ADD CONSTRAINT diagnosis FOREIGN KEY (diagnosis_no) REFERENCES ucare.diagnosis(diagnosis_no);
+ALTER TABLE ucare.prescription ADD CONSTRAINT medicine FOREIGN KEY (medicine_no) REFERENCES ucare.medicine(medicine_no);
+----------------------------------------------------------------------------------------------------------------------------------------
+-- ucare.receipt definition
+
+-- Drop table
+
+-- DROP TABLE ucare.receipt;
+
+CREATE TABLE ucare.receipt (
+	receipt_no bigserial NOT NULL, -- 접수번호
+	receipt_dt date NOT NULL, -- 접수날짜
+	receipt_time time NOT NULL, -- 접수시간
+	accept_yn varchar(5) NOT NULL, -- 수납여부
+	remark text NULL, -- 비고
+	bp int4 NOT NULL, -- 혈압
+	bs int4 NOT NULL, -- 혈당
+	user_no int8 NOT NULL, -- 입력자
+	ins_dt timestamp NOT NULL, -- 입력일자
+	upt_no varchar(50) NOT NULL, -- 수정자
+	upt_dt timestamp NOT NULL, -- 수정일자
+	patient_no int8 NULL,
+	CONSTRAINT receipt_pkey PRIMARY KEY (receipt_no)
+);
+
+-- Column comments
+
+COMMENT ON COLUMN ucare.receipt.receipt_no IS '접수번호';
+COMMENT ON COLUMN ucare.receipt.receipt_dt IS '접수날짜';
+COMMENT ON COLUMN ucare.receipt.receipt_time IS '접수시간';
+COMMENT ON COLUMN ucare.receipt.accept_yn IS '수납여부';
+COMMENT ON COLUMN ucare.receipt.remark IS '비고';
+COMMENT ON COLUMN ucare.receipt.bp IS '혈압';
+COMMENT ON COLUMN ucare.receipt.bs IS '혈당';
+COMMENT ON COLUMN ucare.receipt.user_no IS '입력자';
+COMMENT ON COLUMN ucare.receipt.ins_dt IS '입력일자';
+COMMENT ON COLUMN ucare.receipt.upt_no IS '수정자';
+COMMENT ON COLUMN ucare.receipt.upt_dt IS '수정일자';
+
+-- Permissions
+
+ALTER TABLE ucare.receipt OWNER TO postgres;
+GRANT ALL ON TABLE ucare.receipt TO postgres;
+
+
+-- ucare.receipt foreign keys
+
+ALTER TABLE ucare.receipt ADD CONSTRAINT patient FOREIGN KEY (patient_no) REFERENCES ucare.patient(patient_no);
+ALTER TABLE ucare.receipt ADD CONSTRAINT "user" FOREIGN KEY (user_no) REFERENCES ucare."user"(user_no);
+----------------------------------------------------------------------------------------------------------------------------------------
 -- ucare."user" definition
 
 -- Drop table
@@ -31,242 +289,8 @@ COMMENT ON COLUMN ucare."user".tel_no IS '연락처';
 COMMENT ON COLUMN ucare."user"."role" IS '직급';
 COMMENT ON COLUMN ucare."user".remark IS '비고';
 
-
 -- Permissions
 
 ALTER TABLE ucare."user" OWNER TO postgres;
 GRANT ALL ON TABLE ucare."user" TO postgres;
-
-==================================================================================================
--- ucare.diagnosis definition
-
--- Drop table
-
--- DROP TABLE ucare.diagnosis;
-
-CREATE TABLE ucare.diagnosis (
-	diagnosis_no bigserial NOT NULL, -- 진료번호
-	diagnosis_memo text NOT NULL, -- 진료메모
-	cure_yn varchar(50) NOT NULL, -- 치료여부
-	diagnosis_dt date NOT NULL, -- 진료날짜
-	ins_dt date NOT NULL, -- 입력일자
-	upt_no varchar(50) NOT NULL, -- 수정자
-	upt_dt date NOT NULL, -- 수정일자
-	remark text NULL, -- 비고
-	CONSTRAINT diagnosis_pkey PRIMARY KEY (diagnosis_no)
-);
-
--- Column comments
-
-COMMENT ON COLUMN ucare.diagnosis.diagnosis_no IS '진료번호';
-COMMENT ON COLUMN ucare.diagnosis.diagnosis_memo IS '진료메모';
-COMMENT ON COLUMN ucare.diagnosis.cure_yn IS '치료여부';
-COMMENT ON COLUMN ucare.diagnosis.diagnosis_dt IS '진료날짜';
-COMMENT ON COLUMN ucare.diagnosis.ins_dt IS '입력일자';
-COMMENT ON COLUMN ucare.diagnosis.upt_no IS '수정자';
-COMMENT ON COLUMN ucare.diagnosis.upt_dt IS '수정일자';
-COMMENT ON COLUMN ucare.diagnosis.remark IS '비고';
-
--- Permissions
-
-ALTER TABLE ucare.diagnosis OWNER TO postgres;
-GRANT ALL ON TABLE ucare.diagnosis TO postgres;
-
-==================================================================================================
--- ucare.medicine definition
-
--- Drop table
-
--- DROP TABLE ucare.medicine;
-
-CREATE TABLE ucare.medicine (
-	medicine_no bigserial NOT NULL, -- 약품코드
-	medicine_nm varchar(100) NOT NULL, -- 약품명
-	symptom text NOT NULL, -- 임상증상
-	generic varchar(100) NOT NULL, -- 제네릭
-	price int4 NOT NULL, -- 가격
-	maker varchar(100) NULL, -- 제조사
-	CONSTRAINT medicine_pkey PRIMARY KEY (medicine_no)
-);
-
--- Column comments
-
-COMMENT ON COLUMN ucare.medicine.medicine_no IS '약품코드';
-COMMENT ON COLUMN ucare.medicine.medicine_nm IS '약품명';
-COMMENT ON COLUMN ucare.medicine.symptom IS '임상증상';
-COMMENT ON COLUMN ucare.medicine.generic IS '제네릭';
-COMMENT ON COLUMN ucare.medicine.price IS '가격';
-COMMENT ON COLUMN ucare.medicine.maker IS '제조사';
-
--- Permissions
-
-ALTER TABLE ucare.medicine OWNER TO postgres;
-GRANT ALL ON TABLE ucare.medicine TO postgres;
-
-==================================================================================================
--- ucare.prescription definition
-
--- Drop table
-
--- DROP TABLE ucare.prescription;
-
-CREATE TABLE ucare.prescription (
-	prescription_no bigserial NOT NULL, -- 처방코드
-	CONSTRAINT prescription_pkey PRIMARY KEY (prescription_no)
-);
-
--- Column comments
-
-COMMENT ON COLUMN ucare.prescription.prescription_no IS '처방코드';
-
--- Permissions
-
-ALTER TABLE ucare.prescription OWNER TO postgres;
-GRANT ALL ON TABLE ucare.prescription TO postgres;
-==================================================================================================
--- ucare.disease definition
-
--- Drop table
-
--- DROP TABLE ucare.disease;
-
-CREATE TABLE ucare.disease (
-	disease_no bigserial NOT NULL, -- 질병코드
-	disease_nm varchar(100) NOT NULL, -- 병명
-	symptom varchar(200) NOT NULL, -- 증상
-	CONSTRAINT disease_pkey PRIMARY KEY (disease_no)
-);
-
--- Column comments
-
-COMMENT ON COLUMN ucare.disease.disease_no IS '질병코드';
-COMMENT ON COLUMN ucare.disease.disease_nm IS '병명';
-COMMENT ON COLUMN ucare.disease.symptom IS '증상';
-
--- Permissions
-
-ALTER TABLE ucare.disease OWNER TO postgres;
-GRANT ALL ON TABLE ucare.disease TO postgres;
-
-==================================================================================================
--- ucare.receipt definition
-
--- Drop table
-
--- DROP TABLE ucare.receipt;
-
-CREATE TABLE ucare.receipt (
-	receipt_no bigserial NOT NULL, -- 접수번호
-	receipt_dt date NOT NULL, -- 접수날짜
-	receipt_time time NOT NULL, -- 접수시간
-	accept_yn varchar(5) NOT NULL, -- 수납여부
-	remark text NULL, -- 비고
-	bp int4 NOT NULL, -- 혈압
-	bs int4 NOT NULL, -- 혈당
-	user_no varchar(100) NOT NULL, -- 입력자
-	ins_dt timestamp NOT NULL, -- 입력일자
-	upt_no varchar(50) NOT NULL, -- 수정자
-	upt_dt timestamp NOT NULL, -- 수정일자
-	CONSTRAINT receipt_pkey PRIMARY KEY (receipt_no)
-);
-
--- Column comments
-
-COMMENT ON COLUMN ucare.receipt.receipt_no IS '접수번호';
-COMMENT ON COLUMN ucare.receipt.receipt_dt IS '접수날짜';
-COMMENT ON COLUMN ucare.receipt.receipt_time IS '접수시간';
-COMMENT ON COLUMN ucare.receipt.accept_yn IS '수납여부';
-COMMENT ON COLUMN ucare.receipt.remark IS '비고';
-COMMENT ON COLUMN ucare.receipt.bp IS '혈압';
-COMMENT ON COLUMN ucare.receipt.bs IS '혈당';
-COMMENT ON COLUMN ucare.receipt.user_no IS '입력자';
-COMMENT ON COLUMN ucare.receipt.ins_dt IS '입력일자';
-COMMENT ON COLUMN ucare.receipt.upt_no IS '수정자';
-COMMENT ON COLUMN ucare.receipt.upt_dt IS '수정일자';
-
--- Permissions
-
-ALTER TABLE ucare.receipt OWNER TO postgres;
-GRANT ALL ON TABLE ucare.receipt TO postgres;
-
-==================================================================================================
-
--- ucare.patient definition
-
--- Drop table
-
--- DROP TABLE ucare.patient;
-
-CREATE TABLE ucare.patient (
-	patient_no bigserial NOT NULL, -- 환자등록번호
-	"name" varchar(50) NOT NULL, -- 이름
-	gender varchar(10) NOT NULL, -- 성별
-	ssn varchar(100) NOT NULL, -- 주민등록번호
-	insurance_yn varchar(10) NOT NULL, -- 보험여부
-	tel_no varchar(100) NOT NULL, -- 연락처
-	address varchar(200) NOT NULL, -- 주소
-	diagnosis_type varchar(10) NOT NULL, -- 진료구분
-	visit_date date NOT NULL, -- 내원일
-	height varchar(10) NULL, -- 키
-	weight varchar(10) NULL, -- 몸무게
-	remark text NULL, -- 비고
-	ins_dt date NULL, -- 입력일자
-	upt_no int8 NULL, -- 수정자
-	upt_dt date NULL, -- 수정일자
-	CONSTRAINT patient_pkey PRIMARY KEY (patient_no)
-);
-
--- Column comments
-
-COMMENT ON COLUMN ucare.patient.patient_no IS '환자등록번호';
-COMMENT ON COLUMN ucare.patient."name" IS '이름';
-COMMENT ON COLUMN ucare.patient.gender IS '성별';
-COMMENT ON COLUMN ucare.patient.ssn IS '주민등록번호';
-COMMENT ON COLUMN ucare.patient.insurance_yn IS '보험여부';
-COMMENT ON COLUMN ucare.patient.tel_no IS '연락처';
-COMMENT ON COLUMN ucare.patient.address IS '주소';
-COMMENT ON COLUMN ucare.patient.diagnosis_type IS '진료구분';
-COMMENT ON COLUMN ucare.patient.visit_date IS '내원일';
-COMMENT ON COLUMN ucare.patient.height IS '키';
-COMMENT ON COLUMN ucare.patient.weight IS '몸무게';
-COMMENT ON COLUMN ucare.patient.remark IS '비고';
-COMMENT ON COLUMN ucare.patient.ins_dt IS '입력일자';
-COMMENT ON COLUMN ucare.patient.upt_no IS '수정자';
-COMMENT ON COLUMN ucare.patient.upt_dt IS '수정일자';
-
--- Permissions
-
-ALTER TABLE ucare.patient OWNER TO postgres;
-GRANT ALL ON TABLE ucare.patient TO postgres;
-
-==================================================================================================
-
--- ucare.hospital definition
-
--- Drop table
-
--- DROP TABLE ucare.hospital;
-
-CREATE TABLE ucare.hospital (
-	hospital_no bigserial NOT NULL, -- 병원번호
-	hospital_nm varchar(50) NOT NULL, -- 병원명
-	head_nm varchar(50) NOT NULL, -- 병원장명
-	address varchar(200) NOT NULL, -- 주소
-	tel_no varchar(100) NOT NULL, -- 연락처
-	basic_price money NOT NULL, -- 기본진료비
-	CONSTRAINT hospital_pkey PRIMARY KEY (hospital_no)
-);
-
--- Column comments
-
-COMMENT ON COLUMN ucare.hospital.hospital_no IS '병원번호';
-COMMENT ON COLUMN ucare.hospital.hospital_nm IS '병원명';
-COMMENT ON COLUMN ucare.hospital.head_nm IS '병원장명';
-COMMENT ON COLUMN ucare.hospital.address IS '주소';
-COMMENT ON COLUMN ucare.hospital.tel_no IS '연락처';
-COMMENT ON COLUMN ucare.hospital.basic_price IS '기본진료비';
-
--- Permissions
-
-ALTER TABLE ucare.hospital OWNER TO postgres;
-GRANT ALL ON TABLE ucare.hospital TO postgres;
+----------------------------------------------------------------------------------------------------------------------------------------
