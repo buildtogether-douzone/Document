@@ -12,7 +12,7 @@ CREATE TABLE ucare."user" (
 	gender varchar(10) NOT NULL, -- 성별
 	ssn varchar(100) NOT NULL, -- 주민등록번호
 	address varchar(200) NOT NULL, -- 주소
-	phone_num varchar(100) NOT NULL, -- 연락처
+	tel_no varchar(100) NOT NULL, -- 연락처
 	"role" varchar(100) NOT NULL, -- 직급
 	remark text NULL, -- 비고
 	CONSTRAINT user_pkey PRIMARY KEY (user_seq)
@@ -27,7 +27,7 @@ COMMENT ON COLUMN ucare."user"."name" IS '이름';
 COMMENT ON COLUMN ucare."user".gender IS '성별';
 COMMENT ON COLUMN ucare."user".ssn IS '주민등록번호';
 COMMENT ON COLUMN ucare."user".address IS '주소';
-COMMENT ON COLUMN ucare."user".phone_num IS '연락처';
+COMMENT ON COLUMN ucare."user".tel_no IS '연락처';
 COMMENT ON COLUMN ucare."user"."role" IS '직급';
 COMMENT ON COLUMN ucare."user".remark IS '비고';
 
