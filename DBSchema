@@ -157,7 +157,6 @@ GRANT ALL ON TABLE ucare.disease TO postgres;
 
 CREATE TABLE ucare.receipt (
 	receipt_no bigserial NOT NULL, -- 접수번호
-	patient_no varchar(50) NOT NULL,
 	receipt_dt date NOT NULL, -- 접수날짜
 	receipt_time time NOT NULL, -- 접수시간
 	accept_yn varchar(5) NOT NULL, -- 수납여부
@@ -165,9 +164,9 @@ CREATE TABLE ucare.receipt (
 	bp int4 NOT NULL, -- 혈압
 	bs int4 NOT NULL, -- 혈당
 	user_no varchar(100) NOT NULL, -- 입력자
-	ins_dt timestamp NULL, -- 입력일자
-	upt_no varchar(50) NULL, -- 수정자
-	upt_dt timestamp NULL, -- 수정일자
+	ins_dt timestamp NOT NULL, -- 입력일자
+	upt_no varchar(50) NOT NULL, -- 수정자
+	upt_dt timestamp NOT NULL, -- 수정일자
 	CONSTRAINT receipt_pkey PRIMARY KEY (receipt_no)
 );
 
