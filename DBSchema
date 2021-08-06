@@ -15,10 +15,6 @@ CREATE TABLE ucare."user" (
 	phone_num varchar(100) NOT NULL, -- 연락처
 	"role" varchar(100) NOT NULL, -- 직급
 	remark text NULL, -- 비고
-	ins_seq varchar(100) NOT NULL, -- 입력자
-	ins_date date NOT NULL, -- 입력일자
-	upt_seq varchar(100) NOT NULL, -- 수정자
-	upt_date date NOT NULL, -- 수정일자
 	CONSTRAINT user_pkey PRIMARY KEY (user_seq)
 );
 
@@ -34,13 +30,9 @@ COMMENT ON COLUMN ucare."user".address IS '주소';
 COMMENT ON COLUMN ucare."user".phone_num IS '연락처';
 COMMENT ON COLUMN ucare."user"."role" IS '직급';
 COMMENT ON COLUMN ucare."user".remark IS '비고';
-COMMENT ON COLUMN ucare."user".ins_seq IS '입력자';
-COMMENT ON COLUMN ucare."user".ins_date IS '입력일자';
-COMMENT ON COLUMN ucare."user".upt_seq IS '수정자';
-COMMENT ON COLUMN ucare."user".upt_date IS '수정일자';
+
 
 -- Permissions
 
 ALTER TABLE ucare."user" OWNER TO postgres;
 GRANT ALL ON TABLE ucare."user" TO postgres;
-
