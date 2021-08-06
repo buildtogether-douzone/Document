@@ -5,7 +5,7 @@
 -- DROP TABLE ucare."user";
 
 CREATE TABLE ucare."user" (
-	user_seq bigserial NOT NULL, -- 유저번호
+	user_no bigserial NOT NULL, -- 유저번호
 	id varchar(50) NOT NULL, -- ID
 	"password" varchar(200) NOT NULL, -- 비밀번호
 	"name" varchar(50) NOT NULL, -- 이름
@@ -20,7 +20,7 @@ CREATE TABLE ucare."user" (
 
 -- Column comments
 
-COMMENT ON COLUMN ucare."user".user_seq IS '유저번호';
+COMMENT ON COLUMN ucare."user".user_no IS '유저번호';
 COMMENT ON COLUMN ucare."user".id IS 'ID';
 COMMENT ON COLUMN ucare."user"."password" IS '비밀번호';
 COMMENT ON COLUMN ucare."user"."name" IS '이름';
