@@ -57,11 +57,11 @@
    		= mvnw: mvnw 는 Maven 대신에 사용되는 실행 가능한 unix shell script
    		= mvnw.cmd: mvnw 의 윈도우 배치 버전 shell script 입니다.
    	- .mvn directory 에는 wrapper directory 가 생성되며 그 안에는 
-   		MavenWrapperDownloader.java, maven-wrapper.jar, maven-wrapper.properties 3개 		파일이 존재
-   		= MavenWrapperDownloader.java: java class file 인 이 파일을 compiling 및 실행하여 									   Maven 을 다운로드
-   		= maven-wrapper.jar: wrapper shell scripts 로 부터 maven 을 실행하고, 다운로드 하는							  데 사용
-   		= maven-wrapper.properties: Maven 이 존재하지 않는 경우 다운로드하기 위한 URL 을 명시									 하기 위해서 사용됩니다.
-   	이 파일들을 통해서 Maven 이 존재하지 않아도 특정 버전과 classpath 를 가지고 공통된 Maven 을 	   	 다운로드 및 사용할 수 있음
+   		MavenWrapperDownloader.java, maven-wrapper.jar, maven-wrapper.properties 3개 파일이 존재
+   		= MavenWrapperDownloader.java: java class file 인 이 파일을 compiling 및 실행하여 Maven 을 다운로드
+   		= maven-wrapper.jar: wrapper shell scripts 로 부터 maven 을 실행하고, 다운로드 하는데 사용
+   		= maven-wrapper.properties: Maven 이 존재하지 않는 경우 다운로드하기 위한 URL 을 명시하기 위해서 사용
+   	이 파일들을 통해서 Maven 이 존재하지 않아도 특정 버전과 classpath 를 가지고 공통된 Maven을 다운로드 및 사용할 수 있음
    
    2. Maven Wrapper 실행하기
       추가된 Maven Wrapper 파일들로 해당 Maven 을 빌드 및 실행할 수 있음
