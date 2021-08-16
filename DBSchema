@@ -39,7 +39,7 @@ CREATE TABLE ucare."user" (
 	address varchar(200) NOT NULL, -- 주소
 	tel_no varchar(100) NOT NULL, -- 연락처
 	"role" varchar(100) NOT NULL, -- 직급
-	stsatus varchar(20) NOT NULL, -- 상태
+	status varchar(20) NOT NULL, -- 상태
 	remark text NULL, -- 비고
 	CONSTRAINT user_pkey PRIMARY KEY (user_no)
 );
