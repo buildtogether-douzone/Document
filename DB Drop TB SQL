@@ -1,0 +1,8 @@
+DROP TABLE ucare.prescription;
+DROP TABLE ucare.medicine;
+DROP TABLE ucare.hospital;
+DROP TABLE ucare.diagnosis;
+DROP TABLE ucare.receipt;
+DROP TABLE ucare.patient;
+DROP TABLE ucare."user";
+DROP TABLE ucare.disease;
