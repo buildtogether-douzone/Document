@@ -35,9 +35,11 @@ CREATE TABLE ucare."user" (
 	"name" varchar(50) NOT NULL, -- 이름
 	gender varchar(10) NOT NULL, -- 성별
 	ssn varchar(100) NOT NULL, -- 주민등록번호
+	email varchar(50) NOT NULL, -- 이메일
 	address varchar(200) NOT NULL, -- 주소
 	tel_no varchar(100) NOT NULL, -- 연락처
 	"role" varchar(100) NOT NULL, -- 직급
+	stsatus varchar(20) NOT NULL, -- 상태
 	remark text NULL, -- 비고
 	CONSTRAINT user_pkey PRIMARY KEY (user_no)
 );
@@ -50,9 +52,11 @@ COMMENT ON COLUMN ucare."user"."password" IS '비밀번호';
 COMMENT ON COLUMN ucare."user"."name" IS '이름';
 COMMENT ON COLUMN ucare."user".gender IS '성별';
 COMMENT ON COLUMN ucare."user".ssn IS '주민등록번호';
+COMMENT ON COLUMN ucare."user".email IS '이메일';
 COMMENT ON COLUMN ucare."user".address IS '주소';
 COMMENT ON COLUMN ucare."user".tel_no IS '연락처';
 COMMENT ON COLUMN ucare."user"."role" IS '직급';
+COMMENT ON COLUMN ucare."user".status IS '상태';
 COMMENT ON COLUMN ucare."user".remark IS '비고';
 
 -- Permissions
