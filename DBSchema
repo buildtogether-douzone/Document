@@ -61,7 +61,7 @@ COMMENT ON COLUMN ucare."user".status IS '상태';
 COMMENT ON COLUMN ucare."user".remark IS '비고';
 COMMENT ON COLUMN ucare."user".birth IS '생일';
 
--- Permissions
+--- Permissions
 
 ALTER TABLE ucare."user" OWNER TO postgres;
 GRANT ALL ON TABLE ucare."user" TO postgres;
