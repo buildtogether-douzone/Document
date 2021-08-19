@@ -1,5 +1,3 @@
-1. [RemoteLiveReload 다운](https://chrome.google.com/webstore/detail/remotelivereload/jlppknnillhjgiengoigajegdpieppei)
+1. JDK 11 이상 download
 
-2. JDK 11 이상 download
-
-3. vscode에 들어가서 Spring Boot Extension Pack 설치
+2. vscode에 들어가서 Spring Boot Extension Pack 설치
