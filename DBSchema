@@ -79,6 +79,7 @@ CREATE TABLE ucare.patient (
 	"name" varchar(50) NOT NULL, -- 이름
 	gender varchar(10) NOT NULL, -- 성별
 	ssn varchar(100) NOT NULL, -- 주민등록번호
+	age int NULL, -- 나이
 	insurance_yn varchar(10) NOT NULL, -- 보험여부
 	tel_no varchar(100) NOT NULL, -- 연락처
 	address varchar(200) NOT NULL, -- 주소
@@ -101,6 +102,7 @@ COMMENT ON COLUMN ucare.patient.patient_no IS '환자등록번호';
 COMMENT ON COLUMN ucare.patient."name" IS '이름';
 COMMENT ON COLUMN ucare.patient.gender IS '성별';
 COMMENT ON COLUMN ucare.patient.ssn IS '주민등록번호';
+COMMENT ON COLUMN ucare.patient.age IS '나이';
 COMMENT ON COLUMN ucare.patient.insurance_yn IS '보험여부';
 COMMENT ON COLUMN ucare.patient.tel_no IS '연락처';
 COMMENT ON COLUMN ucare.patient.address IS '주소';
