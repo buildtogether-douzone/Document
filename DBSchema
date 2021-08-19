@@ -41,8 +41,8 @@ CREATE TABLE ucare."user" (
 	"role" varchar(100) NOT NULL, -- 직급
 	status varchar(20) NOT NULL, -- 상태
 	remark text NULL, -- 비고
-	birth date NULL, -- 생일
-	image varchar(200) NULL, -- 이미지	
+	birth date null, -- 생일
+	image varchar(500) -- 이미지
 	CONSTRAINT user_pkey PRIMARY KEY (user_no)
 );
 
