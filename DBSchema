@@ -41,8 +41,8 @@ CREATE TABLE ucare."user" (
 	"role" varchar(100) NOT NULL, -- 직급
 	status varchar(20) NOT NULL, -- 상태
 	remark text NULL, -- 비고
-	birth date null, -- 생일
-	image varchar(500) -- 이미지
+	birth date NULL, -- 생일
+	image varchar(200) NULL, -- 이미지	
 	CONSTRAINT user_pkey PRIMARY KEY (user_no)
 );
 
@@ -86,6 +86,7 @@ CREATE TABLE ucare.patient (
 	visit_date date NOT NULL, -- 내원일
 	height varchar(10) NULL, -- 키
 	weight varchar(10) NULL, -- 몸무게
+	email varchar(50) NULL, -- 이메일
 	remark text NULL, -- 비고
 	ins_dt date NULL, -- 입력일자
 	upt_no int8 NULL, -- 수정자
@@ -107,6 +108,7 @@ COMMENT ON COLUMN ucare.patient.diagnosis_type IS '진료구분';
 COMMENT ON COLUMN ucare.patient.visit_date IS '내원일';
 COMMENT ON COLUMN ucare.patient.height IS '키';
 COMMENT ON COLUMN ucare.patient.weight IS '몸무게';
+COMMENT ON COLUMN ucare.patient.email IS '이메일';
 COMMENT ON COLUMN ucare.patient.remark IS '비고';
 COMMENT ON COLUMN ucare.patient.ins_dt IS '입력일자';
 COMMENT ON COLUMN ucare.patient.upt_no IS '수정자';
