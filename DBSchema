@@ -142,8 +142,8 @@ CREATE TABLE ucare.receipt (
 	bs int4 NOT NULL, -- 혈당
 	user_no int8 NOT NULL, -- 입력자
 	ins_dt timestamp NOT NULL, -- 입력일자
-	upt_no varchar(50) NOT NULL, -- 수정자
-	upt_dt timestamp NOT NULL, -- 수정일자
+	upt_no varchar(50) NULL, -- 수정자
+	upt_dt timestamp NULL, -- 수정일자
 	patient_no int8 NULL,
 	CONSTRAINT receipt_pkey PRIMARY KEY (receipt_no)
 );
