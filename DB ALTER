@@ -5,3 +5,6 @@ COMMENT ON COLUMN ucare."user".image IS '이미지';
 ALTER TABLE ucare.patient ADD age int;
 COMMENT ON COLUMN ucare.patient.age IS '나이';
 ----------------------------------------------------------------------------------------------------------------------------------------
+ALTER TABLE ucare.receipt ALTER COLUMN upt_dt DROP NOT NULL;
+ALTER TABLE ucare.receipt ALTER COLUMN upt_no DROP NOT NULL;
+----------------------------------------------------------------------------------------------------------------------------------------
