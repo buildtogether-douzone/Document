@@ -7,6 +7,6 @@ hashRouter로 변경(bundle.js 무한생성)
 실시간 메시지 알림
 실시간 환자상태 모니터링
 css 보기 좋게 만들기
-cloude => 클릭 한번에 aws 셋팅 (Json 형식 템플릿 작성)
+cloud => 클릭 한번에 aws 셋팅 (Json 형식 템플릿 작성)
 jar => spring boot static (index.js)
 9/5일 전까지 미팅 한번더
