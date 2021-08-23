@@ -8,3 +8,42 @@ COMMENT ON COLUMN ucare.patient.age IS '나이';
 ALTER TABLE ucare.receipt ALTER COLUMN upt_dt DROP NOT NULL;
 ALTER TABLE ucare.receipt ALTER COLUMN upt_no DROP NOT NULL;
 ----------------------------------------------------------------------------------------------------------------------------------------
+-- ucare.reservation definition
+
+-- Drop table
+
+-- DROP TABLE ucare.reservation;
+
+CREATE TABLE ucare.reservation (
+	rev_no bigserial NOT NULL, -- 예약번호
+	rev_date date NOT NULL, -- 예약날짜
+	rev_time time NOT NULL, -- 예약시간
+	ins_no int8 NULL, -- 입력자
+	ins_dt timestamp NULL, -- 입력일자
+	upt_no int8 NULL, -- 수정자
+	upt_dt timestamp NULL, -- 수정일자
+	patient_no int4 NULL, -- 환자등록번호
+	CONSTRAINT rev_pkey PRIMARY KEY (rev_no)
+);
+
+-- Column comments
+
+COMMENT ON COLUMN ucare.reservation.rev_no IS '예약번호';
+COMMENT ON COLUMN ucare.reservation.rev_date IS '예약날짜';
+COMMENT ON COLUMN ucare.reservation.rev_time IS '예약시간';
+COMMENT ON COLUMN ucare.reservation.ins_no IS '입력자';
+COMMENT ON COLUMN ucare.reservation.ins_dt IS '입력일자';
+COMMENT ON COLUMN ucare.reservation.upt_no IS '수정자';
+COMMENT ON COLUMN ucare.reservation.upt_dt IS '수정일자';
+COMMENT ON COLUMN ucare.reservation.patient_no IS '환자등록번호';
+
+-- Permissions
+
+ALTER TABLE ucare.reservation OWNER TO postgres;
+GRANT ALL ON TABLE ucare.reservation TO postgres;
+
+
+-- ucare.reservation foreign keys
+
+ALTER TABLE ucare.reservation ADD CONSTRAINT patient FOREIGN KEY (patient_no) REFERENCES ucare.patient(patient_no);
+----------------------------------------------------------------------------------------------------------------------------------------
