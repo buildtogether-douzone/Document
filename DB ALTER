@@ -63,3 +63,7 @@ ALTER TABLE ucare."hospital" ADD hd_speak text;
 COMMENT ON COLUMN ucare."hospital".hd_speak IS '병원장 인사말';
 
 ----------------------------------------------------------------------------------------------------------------------------------------
+-- hospital table money 변경 
+-- text로 변경후 int8로 변경
+ALTER TABLE ucare.hospital ALTER COLUMN basic_price TYPE text USING basic_price::text;
+ALTER TABLE ucare.hospital ALTER COLUMN basic_price TYPE int8 USING basic_price::int8;
