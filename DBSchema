@@ -270,6 +270,11 @@ CREATE TABLE ucare.hospital (
 	address varchar(200) NOT NULL, -- 주소
 	tel_no varchar(100) NOT NULL, -- 연락처
 	basic_price money NOT NULL, -- 기본진료비
+	image varchar(200) NULL, -- 이미지
+	site_add varchar(200) NULL, -- 사이트 주소
+	email varchar(200) NULL, -- 이메일
+	fax_no varchar(200) NULL, -- 팩스 번호
+	hd_speak text NULL, -- 병원장 인사말
 	CONSTRAINT hospital_pkey PRIMARY KEY (hospital_no)
 );
 
@@ -281,6 +286,11 @@ COMMENT ON COLUMN ucare.hospital.head_nm IS '병원장명';
 COMMENT ON COLUMN ucare.hospital.address IS '주소';
 COMMENT ON COLUMN ucare.hospital.tel_no IS '연락처';
 COMMENT ON COLUMN ucare.hospital.basic_price IS '기본진료비';
+COMMENT ON COLUMN ucare.hospital.image IS '이미지';
+COMMENT ON COLUMN ucare.hospital.site_add IS '사이트 주소';
+COMMENT ON COLUMN ucare.hospital.email IS '이메일';
+COMMENT ON COLUMN ucare.hospital.fax_no IS '팩스 번호';
+COMMENT ON COLUMN ucare.hospital.hd_speak IS '병원장 인사말';
 
 -- Permissions
 
