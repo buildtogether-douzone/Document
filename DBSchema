@@ -90,7 +90,7 @@ CREATE TABLE ucare.patient (
 	email varchar(50) NULL, -- 이메일
 	remark text NULL, -- 비고
 	ins_dt date NULL, -- 입력일자
-	upt_no int8 NULL, -- 수정자
+	upt_no varchar(50) NULL, -- 수정자
 	upt_dt date NULL, -- 수정일자
 	user_no int8 NULL,
 	CONSTRAINT patient_pkey PRIMARY KEY (patient_no)
