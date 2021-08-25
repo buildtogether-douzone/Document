@@ -61,4 +61,5 @@ COMMENT ON COLUMN ucare."hospital".fax_no IS '팩스 번호';
 
 ALTER TABLE ucare."hospital" ADD hd_speak text;
 COMMENT ON COLUMN ucare."hospital".hd_speak IS '병원장 인사말';
+
 ----------------------------------------------------------------------------------------------------------------------------------------
