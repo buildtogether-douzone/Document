@@ -47,3 +47,18 @@ GRANT ALL ON TABLE ucare.reservation TO postgres;
 
 ALTER TABLE ucare.reservation ADD CONSTRAINT patient FOREIGN KEY (patient_no) REFERENCES ucare.patient(patient_no);
 ----------------------------------------------------------------------------------------------------------------------------------------
+ALTER TABLE ucare."hospital" ADD image varchar(200);
+COMMENT ON COLUMN ucare."hospital".image IS '이미지';
+
+ALTER TABLE ucare."hospital" ADD site_add varchar(200);
+COMMENT ON COLUMN ucare."hospital".site_add IS '사이트 주소';
+
+ALTER TABLE ucare."hospital" ADD email varchar(200);
+COMMENT ON COLUMN ucare."hospital".email IS '이메일';
+
+ALTER TABLE ucare."hospital" ADD fax_no varchar(200);
+COMMENT ON COLUMN ucare."hospital".fax_no IS '팩스 번호';
+
+ALTER TABLE ucare."hospital" ADD hd_speak text;
+COMMENT ON COLUMN ucare."hospital".hd_speak IS '병원장 인사말';
+----------------------------------------------------------------------------------------------------------------------------------------
