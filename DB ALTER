@@ -72,3 +72,7 @@ ALTER TABLE ucare.hospital ALTER COLUMN basic_price TYPE int8 USING basic_price:
 ALTER TABLE ucare.patient ALTER COLUMN upt_no TYPE VARCHAR(50);
 
 ----------------------------------------------------------------------------------------------------------------------------------------
+ALTER TABLE ucare.receipt ALTER COLUMN bp DROP NOT NULL;
+ALTER TABLE ucare.receipt ALTER COLUMN bs DROP NOT NULL;
+
+----------------------------------------------------------------------------------------------------------------------------------------
