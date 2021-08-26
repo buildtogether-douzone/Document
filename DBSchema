@@ -177,8 +177,8 @@ CREATE TABLE ucare.receipt (
 	receipt_time time NOT NULL, -- 접수시간
 	accept_yn varchar(5) NOT NULL, -- 수납여부
 	remark text NULL, -- 비고
-	bp int4 NOT NULL, -- 혈압
-	bs int4 NOT NULL, -- 혈당
+	bp int4 NULL, -- 혈압
+	bs int4 NULL, -- 혈당
 	user_no int8 NOT NULL, -- 입력자
 	ins_dt timestamp NOT NULL, -- 입력일자
 	upt_no varchar(50) NULL, -- 수정자
