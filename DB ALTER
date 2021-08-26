@@ -80,3 +80,5 @@ ALTER TABLE ucare.receipt ADD state varchar(50);
 COMMENT ON COLUMN ucare.receipt.state IS '상태';
 
 ----------------------------------------------------------------------------------------------------------------------------------------
+ALTER TABLE ucare.patient ADD email varchar(50);
+COMMENT ON COLUMN ucare.patient.email IS '이메일';
