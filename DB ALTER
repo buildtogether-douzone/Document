@@ -76,3 +76,7 @@ ALTER TABLE ucare.receipt ALTER COLUMN bp DROP NOT NULL;
 ALTER TABLE ucare.receipt ALTER COLUMN bs DROP NOT NULL;
 
 ----------------------------------------------------------------------------------------------------------------------------------------
+ALTER TABLE ucare.receipt ADD state varchar(50);
+COMMENT ON COLUMN ucare.receipt.state IS '상태';
+
+----------------------------------------------------------------------------------------------------------------------------------------
