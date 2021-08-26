@@ -183,6 +183,7 @@ CREATE TABLE ucare.receipt (
 	ins_dt timestamp NOT NULL, -- 입력일자
 	upt_no varchar(50) NULL, -- 수정자
 	upt_dt timestamp NULL, -- 수정일자
+	state varchar(50) NULL, -- 상태
 	patient_no int8 NULL,
 	CONSTRAINT receipt_pkey PRIMARY KEY (receipt_no)
 );
@@ -200,6 +201,7 @@ COMMENT ON COLUMN ucare.receipt.user_no IS '입력자';
 COMMENT ON COLUMN ucare.receipt.ins_dt IS '입력일자';
 COMMENT ON COLUMN ucare.receipt.upt_no IS '수정자';
 COMMENT ON COLUMN ucare.receipt.upt_dt IS '수정일자';
+COMMENT ON COLUMN ucare.receipt.state IS '상태';
 
 -- Permissions
 
