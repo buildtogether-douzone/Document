@@ -82,3 +82,51 @@ COMMENT ON COLUMN ucare.receipt.state IS '상태';
 ----------------------------------------------------------------------------------------------------------------------------------------
 ALTER TABLE ucare.patient ADD email varchar(50);
 COMMENT ON COLUMN ucare.patient.email IS '이메일';
+
+----------------------------------------------------------------------------------------------------------------------------------------
+-- ucare.board definition
+
+-- Drop table
+
+-- DROP TABLE ucare.board;
+
+CREATE TABLE ucare.board (
+	board_no bigserial NOT NULL, -- 공지사항번호
+	title varchar(200) NOT NULL, -- 제목
+	contents text NOT NULL, -- 내용
+	hit int8 NOT NULL, -- 조회수
+	image varchar(200) NULL, -- 이미지
+	board_date date NOT NULL, -- 작성날짜
+	board_time time NOT NULL, -- 작성시간
+	ins_no int8 NULL, -- 입력자
+	ins_dt timestamp NULL, -- 입력일자
+	upt_no int8 NULL, -- 수정자
+	upt_dt timestamp NULL, -- 수정일자
+	user_no int4 NULL, -- 유저등록번호
+	CONSTRAINT board_pkey PRIMARY KEY (board_no)
+);
+
+-- Column comments
+
+COMMENT ON COLUMN ucare.board.board_no IS '공지사항번호';
+COMMENT ON COLUMN ucare.board.title IS '제목';
+COMMENT ON COLUMN ucare.board.contents IS '내용';
+COMMENT ON COLUMN ucare.board.hit IS '조회수';
+COMMENT ON COLUMN ucare.board.image IS '이미지';
+COMMENT ON COLUMN ucare.board.board_date IS '작성날짜';
+COMMENT ON COLUMN ucare.board.board_time IS '작성시간';
+COMMENT ON COLUMN ucare.board.ins_no IS '입력자';
+COMMENT ON COLUMN ucare.board.ins_dt IS '입력일자';
+COMMENT ON COLUMN ucare.board.upt_no IS '수정자';
+COMMENT ON COLUMN ucare.board.upt_dt IS '수정일자';
+COMMENT ON COLUMN ucare.board.user_no IS '유저등록번호';
+
+-- Permissions
+
+ALTER TABLE ucare.board OWNER TO postgres;
+GRANT ALL ON TABLE ucare.board TO postgres;
+
+
+-- ucare.board foreign keys
+
+ALTER TABLE ucare.board ADD CONSTRAINT "user" FOREIGN KEY (user_no) REFERENCES ucare."user"(user_no);
