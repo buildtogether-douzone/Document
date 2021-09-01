@@ -133,3 +133,27 @@ ALTER TABLE ucare.board ADD CONSTRAINT "user" FOREIGN KEY (user_no) REFERENCES u
 ----------------------------------------------------------------------------------------------------------------------------------------
 ALTER TABLE ucare.diagnosis ADD diagnosis_time time;
 COMMENT ON COLUMN ucare.diagnosis.diagnosis_time IS '진료시간';
+----------------------------------------------------------------------------------------------------------------------------------------
+-- ucare."time" definition
+
+-- Drop table
+
+-- DROP TABLE ucare."time";
+
+CREATE TABLE ucare."time" (
+	time_no bigserial NOT NULL, -- 번호
+	"date" date NOT NULL, -- 진료날짜
+	"time" time NOT NULL, -- 진료시간
+	CONSTRAINT time_pkey PRIMARY KEY (time_no)
+);
+
+-- Column comments
+
+COMMENT ON COLUMN ucare."time".time_no IS '번호';
+COMMENT ON COLUMN ucare."time"."date" IS '진료날짜';
+COMMENT ON COLUMN ucare."time"."time" IS '진료시간';
+
+-- Permissions
+
+ALTER TABLE ucare."time" OWNER TO postgres;
+GRANT ALL ON TABLE ucare."time" TO postgres;
