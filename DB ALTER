@@ -157,3 +157,6 @@ COMMENT ON COLUMN ucare."time"."time" IS '진료시간';
 
 ALTER TABLE ucare."time" OWNER TO postgres;
 GRANT ALL ON TABLE ucare."time" TO postgres;
+----------------------------------------------------------------------------------------------------------------------------------------
+ALTER TABLE ucare.time ADD status boolean;
+COMMENT ON COLUMN ucare.time.status IS '상태';
