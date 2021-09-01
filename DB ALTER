@@ -130,3 +130,6 @@ GRANT ALL ON TABLE ucare.board TO postgres;
 -- ucare.board foreign keys
 
 ALTER TABLE ucare.board ADD CONSTRAINT "user" FOREIGN KEY (user_no) REFERENCES ucare."user"(user_no);
+----------------------------------------------------------------------------------------------------------------------------------------
+ALTER TABLE ucare.diagnosis ADD diagnosis_time time;
+COMMENT ON COLUMN ucare.diagnosis.diagnosis_time IS '진료시간';
