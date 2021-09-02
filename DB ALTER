@@ -160,3 +160,6 @@ GRANT ALL ON TABLE ucare."time" TO postgres;
 ----------------------------------------------------------------------------------------------------------------------------------------
 ALTER TABLE ucare.time ADD status boolean;
 COMMENT ON COLUMN ucare.time.status IS '상태';
+----------------------------------------------------------------------------------------------------------------------------------------
+ALTER TABLE ucare.receipt ALTER COLUMN diagnosis_time TYPE varchar;
+ALTER TABLE ucare.time ALTER COLUMN time TYPE varchar;
