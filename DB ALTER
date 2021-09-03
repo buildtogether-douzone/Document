@@ -167,5 +167,5 @@ ALTER TABLE ucare.time ALTER COLUMN time TYPE varchar;
 ALTER TABLE ucare.patient ADD detail_address varchar(200);
 COMMENT ON COLUMN ucare.patient.detail_address IS '상세 주소';
 ----------------------------------------------------------------------------------------------------------------------------------------
-ALTER TABLE ucare.board RENAME COLUMN image TO "URL";
+ALTER TABLE ucare.board RENAME COLUMN image TO "url";
 COMMENT ON COLUMN ucare.board."URL" IS 'URL';
