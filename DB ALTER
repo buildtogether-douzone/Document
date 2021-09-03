@@ -168,7 +168,7 @@ ALTER TABLE ucare.patient ADD detail_address varchar(200);
 COMMENT ON COLUMN ucare.patient.detail_address IS '상세 주소';
 ----------------------------------------------------------------------------------------------------------------------------------------
 ALTER TABLE ucare.board RENAME COLUMN image TO "url";
-COMMENT ON COLUMN ucare.board."URL" IS 'URL';
+COMMENT ON COLUMN ucare.board.image IS 'URL';
 ----------------------------------------------------------------------------------------------------------------------------------------
 ALTER TABLE ucare.patient ADD detail_address varchar(200) null;
 COMMENT ON COLUMN ucare.patient.detail_address IS '상세주소';
