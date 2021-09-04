@@ -163,6 +163,7 @@ COMMENT ON COLUMN ucare.time.status IS '상태';
 ----------------------------------------------------------------------------------------------------------------------------------------
 ALTER TABLE ucare.receipt ALTER COLUMN diagnosis_time TYPE varchar;
 ALTER TABLE ucare.time ALTER COLUMN time TYPE varchar;
+ALTER TABLE ucare.reservation ALTER COLUMN time TYPE varchar;
 ----------------------------------------------------------------------------------------------------------------------------------------
 ALTER TABLE ucare.patient ADD detail_address varchar(200);
 COMMENT ON COLUMN ucare.patient.detail_address IS '상세 주소';
