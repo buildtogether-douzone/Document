@@ -255,3 +255,9 @@ CREATE TABLE BATCH_JOB_EXECUTION_CONTEXT  (
 CREATE SEQUENCE BATCH_STEP_EXECUTION_SEQ MAXVALUE 9223372036854775807 NO CYCLE;
 CREATE SEQUENCE BATCH_JOB_EXECUTION_SEQ MAXVALUE 9223372036854775807 NO CYCLE;
 CREATE SEQUENCE BATCH_JOB_SEQ MAXVALUE 9223372036854775807 NO CYCLE;
+----------------------------------------------------------------------------------------------------------------------------------------
+ALTER TABLE ucare.diagnosis ADD patient_no int8;
+COMMENT ON COLUMN ucare.diagnosis.patient_no IS '환자번호';
+
+ALTER TABLE ucare.diagnosis ADD CONSTRAINT patient FOREIGN KEY (patient_no) REFERENCES ucare.patient(patient_no);
+----------------------------------------------------------------------------------------------------------------------------------------
