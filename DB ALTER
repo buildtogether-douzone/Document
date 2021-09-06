@@ -263,3 +263,11 @@ ALTER TABLE ucare.diagnosis ALTER COLUMN upt_dt DROP NOT NULL;
 ALTER TABLE ucare.diagnosis ALTER COLUMN ins_dt DROP NOT NULL;
 ----------------------------------------------------------------------------------------------------------------------------------------
 ALTER TABLE ucare.disease ALTER COLUMN symptom DROP NOT NULL;
+ALTER TABLE ucare.disease ADD disease_code varchar NULL;
+COMMENT ON COLUMN ucare.disease.disease_code IS '질병코드';
+ALTER TABLE ucare.disease ADD disease_eng_nm varchar NULL;
+COMMENT ON COLUMN ucare.disease.disease_eng_nm IS '질병영문명';
+COMMENT ON COLUMN ucare.disease.disease_no IS '질병번호';
+COMMENT ON COLUMN ucare.disease.disease_nm IS '질병한글명';
+ALTER TABLE ucare.disease ALTER COLUMN disease_code SET NOT NULL;
+----------------------------------------------------------------------------------------------------------------------------------------
