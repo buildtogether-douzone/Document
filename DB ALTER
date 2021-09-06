@@ -258,3 +258,7 @@ COMMENT ON COLUMN ucare.diagnosis.patient_no IS '환자번호';
 
 ALTER TABLE ucare.diagnosis ADD CONSTRAINT patient FOREIGN KEY (patient_no) REFERENCES ucare.patient(patient_no);
 ----------------------------------------------------------------------------------------------------------------------------------------
+ALTER TABLE ucare.diagnosis ALTER COLUMN upt_no DROP NOT NULL;
+ALTER TABLE ucare.diagnosis ALTER COLUMN upt_dt DROP NOT NULL;
+ALTER TABLE ucare.diagnosis ALTER COLUMN ins_dt DROP NOT NULL;
+----------------------------------------------------------------------------------------------------------------------------------------
