@@ -284,5 +284,10 @@ COMMENT ON COLUMN ucare.medicine.additive IS '첨가제';
 ALTER TABLE ucare.medicine ADD origin varchar NULL;
 COMMENT ON COLUMN ucare.medicine.origin IS '수입/제조';
 ----------------------------------------------------------------------------------------------------------------------------------------
-
-
+ALTER TABLE ucare.diagnosis ADD disease_nm varchar NULL;
+COMMENT ON COLUMN ucare.diagnosis.disease_nm IS '병명';
+ALTER TABLE ucare.diagnosis ADD medicine_nm varchar NULL;
+COMMENT ON COLUMN ucare.diagnosis.medicine_nm IS '약품명';
+ALTER TABLE ucare.diagnosis DROP CONSTRAINT disease;
+ALTER TABLE ucare.diagnosis DROP COLUMN disease_no;
+----------------------------------------------------------------------------------------------------------------------------------------
