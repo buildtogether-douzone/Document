@@ -281,6 +281,8 @@ ALTER TABLE ucare.medicine ADD main_ingredient varchar NULL;
 COMMENT ON COLUMN ucare.medicine.main_ingredient IS '주성분';
 ALTER TABLE ucare.medicine ADD additive varchar NULL;
 COMMENT ON COLUMN ucare.medicine.additive IS '첨가제';
+ALTER TABLE ucare.medicine ADD origin varchar NULL;
+COMMENT ON COLUMN ucare.medicine.origin IS '수입/제조';
 ----------------------------------------------------------------------------------------------------------------------------------------
 
 
