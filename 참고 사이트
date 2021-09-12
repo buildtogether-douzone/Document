@@ -45,6 +45,8 @@ https://www.codeusingjava.com/boot/batch/hello
 https://deeplify.dev/back-end/spring/batch-tutorial
 https://sabarada.tistory.com/113
 https://sun-p.tistory.com/115
+https://juneyr.dev/2019-07-24/spring-batch-tasklet
+https://stackoverflow.com/questions/47711200/can-we-use-autowired-in-a-tasklet-in-spring-batch
 
 SpringBoot - 이미지를 프로젝트 내의 폴더에 지정해서 업로드
 https://badstorage.tistory.com/41
@@ -88,3 +90,10 @@ https://ui.toast.com/weekly-pick/ko_20200616
 휴일관리
 https://velog.io/@ljo094822/react-%EB%8B%AC%EB%A0%A5%EB%A7%8C%EB%93%A4%EA%B8%B0-calendar
 https://yeolceo.tistory.com/69
+
+Java localTime
+https://www.geeksforgeeks.org/localtime-format-method-in-java-with-examples/
+https://stackoverflow.com/questions/49620467/java-localtime-how-to-compare-time
+https://java119.tistory.com/52
+http://blog.eomdev.com/java/2016/04/01/%EC%9E%90%EB%B0%948%EC%9D%98-java.time-%ED%8C%A8%ED%82%A4%EC%A7%80.html
+http://tcpschool.com/java/java_time_localDateTime
