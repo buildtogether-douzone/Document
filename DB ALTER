@@ -291,3 +291,40 @@ COMMENT ON COLUMN ucare.diagnosis.medicine_nm IS '약품명';
 ALTER TABLE ucare.diagnosis DROP CONSTRAINT disease;
 ALTER TABLE ucare.diagnosis DROP COLUMN disease_no;
 ----------------------------------------------------------------------------------------------------------------------------------------
+
+-- ucare.message definition
+
+-- Drop table
+
+-- DROP TABLE ucare.message;
+
+CREATE TABLE ucare.message (
+	msg_no bigserial NOT NULL, -- 메세지번호
+	"name" varchar(50) NOT NULL, -- 유저이름
+	to_name varchar(50) NOT NULL, -- to
+	contents text NOT NULL, -- 메세지
+	msg_date timestamp NOT NULL, -- 입력날짜
+	status bool NOT NULL, -- 상태
+	user_no int8 NULL,
+	CONSTRAINT msg_pkey PRIMARY KEY (msg_no)
+);
+
+-- Column comments
+
+COMMENT ON COLUMN ucare.message.msg_no IS '메세지번호';
+COMMENT ON COLUMN ucare.message."name" IS '유저이름';
+COMMENT ON COLUMN ucare.message.to_name IS 'to';
+COMMENT ON COLUMN ucare.message.contents IS '메세지';
+COMMENT ON COLUMN ucare.message.msg_date IS '입력날짜';
+COMMENT ON COLUMN ucare.message.status IS '상태';
+
+
+-- Permissions
+
+ALTER TABLE ucare.message OWNER TO postgres;
+GRANT ALL ON TABLE ucare.message TO postgres;
+
+
+-- ucare.message foreign keys
+
+ALTER TABLE ucare.message ADD CONSTRAINT "user" FOREIGN KEY (user_no) REFERENCES ucare."user"(user_no);
