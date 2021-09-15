@@ -529,6 +529,7 @@ CREATE TABLE ucare.message (
 	contents text NOT NULL, -- 메세지
 	msg_date timestamp NOT NULL, -- 입력날짜
 	status bool NOT NULL, -- 상태
+	title varchar(200), -- 제목
 	user_no int8 NULL,
 	CONSTRAINT msg_pkey PRIMARY KEY (msg_no)
 );
@@ -541,6 +542,7 @@ COMMENT ON COLUMN ucare.message.to_name IS 'to';
 COMMENT ON COLUMN ucare.message.contents IS '메세지';
 COMMENT ON COLUMN ucare.message.msg_date IS '입력날짜';
 COMMENT ON COLUMN ucare.message.status IS '상태';
+COMMENT ON COLUMN ucare.message.title IS '제목';
 
 
 -- Permissions
