@@ -328,3 +328,7 @@ GRANT ALL ON TABLE ucare.message TO postgres;
 -- ucare.message foreign keys
 
 ALTER TABLE ucare.message ADD CONSTRAINT "user" FOREIGN KEY (user_no) REFERENCES ucare."user"(user_no);
+
+----------------------------------------------------------------------------------------------------------------------------------------
+ALTER TABLE ucare.message ADD title varchar(200);
+COMMENT ON COLUMN ucare.message.title IS '제목';
