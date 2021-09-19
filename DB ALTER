@@ -334,3 +334,7 @@ ALTER TABLE ucare.message ADD title varchar(200);
 COMMENT ON COLUMN ucare.message.title IS '제목';
 ----------------------------------------------------------------------------------------------------------------------------------------
 ALTER TABLE ucare.message ALTER COLUMN title SET NOT NULL;
+----------------------------------------------------------------------------------------------------------------------------------------
+ALTER TABLE ucare.user ADD detail_address varchar;
+COMMENT ON COLUMN ucare.user.detail_address IS '상세주소';
+----------------------------------------------------------------------------------------------------------------------------------------
