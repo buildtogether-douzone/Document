@@ -332,3 +332,5 @@ ALTER TABLE ucare.message ADD CONSTRAINT "user" FOREIGN KEY (user_no) REFERENCES
 ----------------------------------------------------------------------------------------------------------------------------------------
 ALTER TABLE ucare.message ADD title varchar(200);
 COMMENT ON COLUMN ucare.message.title IS '제목';
+----------------------------------------------------------------------------------------------------------------------------------------
+ALTER TABLE ucare.message ALTER COLUMN title SET NOT NULL;
