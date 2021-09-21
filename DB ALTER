@@ -338,3 +338,27 @@ ALTER TABLE ucare.message ALTER COLUMN title SET NOT NULL;
 ALTER TABLE ucare.user ADD detail_address varchar;
 COMMENT ON COLUMN ucare.user.detail_address IS '상세주소';
 ----------------------------------------------------------------------------------------------------------------------------------------
+-- ucare.holiday definition
+
+-- Drop table
+
+-- DROP TABLE ucare.holiday;
+
+CREATE TABLE ucare.holiday (
+	holiday_no bigserial NOT NULL, -- 번호
+	"date" date NOT NULL, -- 날짜
+	holiday bool NOT NULL, -- 휴일유무
+	CONSTRAINT holiday_pkey PRIMARY KEY (holiday_no)
+);
+
+-- Column comments
+
+COMMENT ON COLUMN ucare.holiday.holiday_no IS '번호';
+COMMENT ON COLUMN ucare.holiday."date" IS '날짜';
+COMMENT ON COLUMN ucare.holiday.holiday IS '휴일유무';
+
+-- Permissions
+
+ALTER TABLE ucare.holiday OWNER TO postgres;
+GRANT ALL ON TABLE ucare.holiday TO postgres;
+----------------------------------------------------------------------------------------------------------------------------------------
