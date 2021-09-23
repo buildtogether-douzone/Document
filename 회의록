@@ -1,10 +1,10 @@
 ResponseEntity (✓)
-Swagger
+Swagger (✓)
 Lombok (✓)
 Spring Security (✓)
 Spring batch (✓)
 hashRouter로 변경(bundle.js 무한생성) => hashRouter로 변경 했지만 계속생성 (X)
-실시간 메시지 알림
+실시간 메시지 알림 (✓)
 실시간 환자상태 모니터링 (✓)
 css 보기 좋게 만들기
 cloud => 클릭 한번에 aws 셋팅 (Json 형식 템플릿 작성)
