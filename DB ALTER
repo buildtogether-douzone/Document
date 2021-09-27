@@ -370,7 +370,8 @@ GRANT ALL ON TABLE ucare.holiday TO postgres;
 
 CREATE TABLE ucare.prescription (
 	prescription_no bigserial NOT NULL, -- 처방코드
-	diagnosis_no int8 NULL, -- 진료코드
+	diagnosis_no int8 NOT NULL, -- 진료코드
+	patient_no int8 NOT NULL, -- 환자코드
 	medicine_nm varchar NOT NULL, -- 처방약
 	dosage int4 NULL, -- 투여량
 	dosing_day int4 NULL, -- 투약일수
@@ -382,6 +383,7 @@ CREATE TABLE ucare.prescription (
 
 COMMENT ON COLUMN ucare.prescription.prescription_no IS '처방코드';
 COMMENT ON COLUMN ucare.prescription.diagnosis_no IS '진료코드';
+COMMENT ON COLUMN ucare.prescription.patient_no IS '환자코드';
 COMMENT ON COLUMN ucare.prescription.medicine_nm IS '처방약';
 COMMENT ON COLUMN ucare.prescription.dosage IS '투여량';
 COMMENT ON COLUMN ucare.prescription.dosing_day IS '투약일수';
@@ -396,4 +398,5 @@ GRANT ALL ON TABLE ucare.prescription TO postgres;
 -- ucare.prescription foreign keys
 
 ALTER TABLE ucare.prescription ADD CONSTRAINT diagnosis FOREIGN KEY (diagnosis_no) REFERENCES ucare.diagnosis(diagnosis_no);
+ALTER TABLE ucare.prescription ADD CONSTRAINT patient FOREIGN KEY (patient_no) REFERENCES ucare.patient(patient_no);
 ----------------------------------------------------------------------------------------------------------------------------------------
