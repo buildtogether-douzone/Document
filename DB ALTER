@@ -366,7 +366,7 @@ GRANT ALL ON TABLE ucare.holiday TO postgres;
 
 -- Drop table
 
--- DROP TABLE ucare.prescription;
+DROP TABLE ucare.prescription;
 
 CREATE TABLE ucare.prescription (
 	prescription_no bigserial NOT NULL, -- 처방코드
@@ -402,3 +402,4 @@ ALTER TABLE ucare.prescription ADD CONSTRAINT patient FOREIGN KEY (patient_no) R
 ----------------------------------------------------------------------------------------------------------------------------------------
 ALTER TABLE ucare.reservation ADD receipt_yn boolean default false;
 COMMENT ON COLUMN ucare.reservation.receipt_yn IS '접수여부';
+----------------------------------------------------------------------------------------------------------------------------------------
