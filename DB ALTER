@@ -400,3 +400,5 @@ GRANT ALL ON TABLE ucare.prescription TO postgres;
 ALTER TABLE ucare.prescription ADD CONSTRAINT diagnosis FOREIGN KEY (diagnosis_no) REFERENCES ucare.diagnosis(diagnosis_no);
 ALTER TABLE ucare.prescription ADD CONSTRAINT patient FOREIGN KEY (patient_no) REFERENCES ucare.patient(patient_no);
 ----------------------------------------------------------------------------------------------------------------------------------------
+ALTER TABLE ucare.reservation ADD receipt_yn boolean default false;
+COMMENT ON COLUMN ucare.reservation.receipt_yn IS '접수여부';
