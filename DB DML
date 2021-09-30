@@ -233,9 +233,6 @@ INSERT INTO ucare.patient
 VALUES('jjj', '남', '881111-1111111', 32, 'Y', '111-1111-1111', '1', '초진', '2021-09-28', NULL, NULL, '111@naver.com', '1', '2021-09-28', NULL, 'NULL', 2, '1');
 INSERT INTO ucare.patient
 ("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
-VALUES('헤이', '여', '960803-2095419', 25, 'Y', '010-6702-8237', '부산 해운대구 센텀중앙로 42 (우동, 시청자미디어센터)', '초진', '2021-09-29', NULL, NULL, 'aaa@naver.com', 'ㅇㅇㅇㅇㅇ', '2021-09-29', NULL, 'NULL', 2, '하이');
-INSERT INTO ucare.patient
-("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
 VALUES('헤이', '여', '000430-4******', 21, 'Y', '010-1234-5677', '대구 달서구 야외음악당로 3 (성당동)', '초진', '2021-09-29', NULL, NULL, 'aaa@nvaer.com', 'ㅇㅇ', '2021-09-29', '2', '2021-09-29', 2, 'ㅇㅇㅇ');
 INSERT INTO ucare.patient
 ("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
