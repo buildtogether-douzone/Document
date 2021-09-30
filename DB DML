@@ -16,3 +16,233 @@ insert into ucare.time(date, time, status) values(now(), '11:20:00', false);
 insert into ucare.time(date, time, status) values(now(), '11:30:00', false);
 insert into ucare.time(date, time, status) values(now(), '11:40:00', false);
 insert into ucare.time(date, time, status) values(now(), '11:50:00', false);
+
+
+INSERT INTO ucare.patient
+("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
+VALUES('둘리', '여', '801234-2122344', 40, 'Y', '010-1234-5678', '부산 강서구 가달1로 7 (생곡동) 펜트하우스', '초진', '2021-09-02', NULL, NULL, 'dooly@gmail.com', '우편 테스트', '2021-09-02', NULL, 'NULL', 1, NULL);
+INSERT INTO ucare.patient
+("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
+VALUES('마이콜', '남', '960803-2011111', 20, 'Y', '010-2062-8237', '깐따삐아', '초진', '2021-08-28', NULL, NULL, 'michol@gmail.com', NULL, 'NULL', '1', 'NULL', NULL, NULL);
+INSERT INTO ucare.patient
+("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
+VALUES('마이콜', '남', '960803-2011111', 20, 'Y', '010-2062-8237', '깐따삐아', '초진', '2021-08-28', NULL, NULL, 'michol@gmail.com', NULL, 'NULL', '1', 'NULL', NULL, NULL);
+INSERT INTO ucare.patient
+("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
+VALUES('마이콜', '남', '960803-2011111', 20, 'Y', '010-2062-8237', '깐따삐아', '초진', '2021-08-28', NULL, NULL, 'michol@gmail.com', NULL, 'NULL', '1', 'NULL', NULL, NULL);
+INSERT INTO ucare.patient
+("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
+VALUES('', '여', '', 2002, '', '', ' ', '', '2021-09-03', NULL, NULL, '@', '', '2021-09-03', NULL, 'NULL', 1, NULL);
+INSERT INTO ucare.patient
+("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
+VALUES('또치', '남', '880909-1223345', 32, 'Y', '010-1234-5677', '서울 강북구 방학로 382 (우이동) 우이동', '초진', '2021-09-03', NULL, NULL, 'ddochi@gmail.com', 'ddochi', '2021-09-03', NULL, 'NULL', 1, NULL);
+INSERT INTO ucare.patient
+("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
+VALUES('마이콜', '남', '770434-1233445', 44, 'Y', '010-6702-8237', '서울 강북구 방학로 382 (우이동)', '초진', '2021-09-03', NULL, NULL, 'michol@gmail.com', '마이콜', '2021-09-03', NULL, 'NULL', 1, '우이동 130번지');
+INSERT INTO ucare.patient
+("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
+VALUES('', '여', '', 2002, 'Y', '', '', '초진', '2021-09-21', NULL, NULL, 'aaaa@', '', '2021-09-21', NULL, 'NULL', 2, '');
+INSERT INTO ucare.patient
+("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
+VALUES('', '여', '', 2002, 'Y', '', '', '초진', '2021-09-21', NULL, NULL, '@aaa', '', '2021-09-21', NULL, 'NULL', 2, '');
+INSERT INTO ucare.patient
+("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
+VALUES('나니', '여', '960803-2111111', 25, 'Y', '010-6702-8237', '부산 강서구 가달1로 7 (생곡동)', '재진', '2021-09-06', NULL, NULL, '나니@gmail.com', '나니', '2021-09-06', NULL, 'NULL', 2, '나니');
+INSERT INTO ucare.patient
+("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
+VALUES('111', '여', '111', 109, 'Y', '111', '111', '초진', '2021-08-30', NULL, NULL, '11@naver.com', '1111', '2021-08-30', NULL, 'NULL', 1, NULL);
+INSERT INTO ucare.patient
+("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
+VALUES('222', '여', '222', 98, 'Y', '222', '222', '초진', '2021-08-30', NULL, NULL, '222@hotmail.com', '222', '2021-08-30', NULL, 'NULL', 1, NULL);
+INSERT INTO ucare.patient
+("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
+VALUES('333', '여', '3333', 87, 'Y', '333', '333', '초진', '2021-08-30', NULL, NULL, '333@hotmail.com', '333', '2021-08-30', NULL, 'NULL', 1, NULL);
+INSERT INTO ucare.patient
+("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
+VALUES('둘리', '남', '960803-1******', 25, 'Y', '010-1234-5678', 'update2', '초진', '2021-08-28', NULL, NULL, 'update2@gmail.com', 'update2', '2021-08-28', '1', '2021-08-30', 3, NULL);
+INSERT INTO ucare.patient
+("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
+VALUES('test', '남', '111111-1111111', 109, 'Y', '010-6702-8237', 'test', '초진', '2021-08-30', NULL, NULL, 'test@gmail.com', 'test', '2021-08-30', NULL, 'NULL', 1, NULL);
+INSERT INTO ucare.patient
+("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
+VALUES('test1', '여', 'test1', 0, 'Y', '010-6702-8237', 'test1', '초진', '2021-08-30', NULL, NULL, 'test1@', 'test1', '2021-08-30', NULL, 'NULL', 1, NULL);
+INSERT INTO ucare.patient
+("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
+VALUES('test2', '남', '960803-1111111', 25, 'Y', '010-6702-8237', 'test2', '초진', '2021-08-30', NULL, NULL, 'test2@naver.com', 'test2', '2021-08-30', NULL, 'NULL', 1, NULL);
+INSERT INTO ucare.patient
+("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
+VALUES('test3', '남', '960803-1111111', 25, 'Y', '010-6702-8237', 'test3', '초진', '2021-08-30', NULL, NULL, 'test3@gmail.com', 'test3', '2021-08-30', NULL, 'NULL', 1, NULL);
+INSERT INTO ucare.patient
+("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
+VALUES('test4', '여', '960803-2222222', 25, 'Y', '010-6702-8237', 'test4', '초진', '2021-08-30', NULL, NULL, 'test4@gmail.com', 'test4', '2021-08-30', NULL, 'NULL', 1, NULL);
+INSERT INTO ucare.patient
+("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
+VALUES('test4', '여', '960803-2222222', 25, 'Y', '010-6702-8237', 'test4', '초진', '2021-08-30', NULL, NULL, 'test4@gmail.com', 'test4', '2021-08-30', NULL, 'NULL', 1, NULL);
+INSERT INTO ucare.patient
+("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
+VALUES('test4', '여', '960803-2222222', 25, 'Y', '010-6702-8237', 'test4', '초진', '2021-08-30', NULL, NULL, 'test4@gmail.com', 'test4', '2021-08-30', NULL, 'NULL', 1, NULL);
+INSERT INTO ucare.patient
+("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
+VALUES('test4', '여', '960803-2222222', 25, 'Y', '010-6702-8237', 'test4', '초진', '2021-08-30', NULL, NULL, 'test4@gmail.com', 'test4', '2021-08-30', NULL, 'NULL', 1, NULL);
+INSERT INTO ucare.patient
+("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
+VALUES('test4', '여', '960803-2222222', 25, 'Y', '010-6702-8237', 'test4', '초진', '2021-08-30', NULL, NULL, 'test4@gmail.com', 'test4', '2021-08-30', NULL, 'NULL', 1, NULL);
+INSERT INTO ucare.patient
+("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
+VALUES('test4', '여', '960803-2222222', 25, 'Y', '010-6702-8237', 'test4', '초진', '2021-08-30', NULL, NULL, 'test4@gmail.com', 'test4', '2021-08-30', NULL, 'NULL', 1, NULL);
+INSERT INTO ucare.patient
+("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
+VALUES('test4', '여', '960803-2222222', 25, 'Y', '010-6702-8237', 'test4', '초진', '2021-08-30', NULL, NULL, 'test4@gmail.com', 'test4', '2021-08-30', NULL, 'NULL', 1, NULL);
+INSERT INTO ucare.patient
+("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
+VALUES('test4', '여', '960803-2222222', 25, 'Y', '010-6702-8237', 'test4', '초진', '2021-08-30', NULL, NULL, 'test4@gmail.com', 'test4', '2021-08-30', NULL, 'NULL', 1, NULL);
+INSERT INTO ucare.patient
+("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
+VALUES('test4', '여', '960803-2222222', 25, 'Y', '010-6702-8237', 'test4', '초진', '2021-08-30', NULL, NULL, 'test4@gmail.com', 'test4', '2021-08-30', NULL, 'NULL', 1, NULL);
+INSERT INTO ucare.patient
+("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
+VALUES('test4', '여', '960803-2222222', 25, 'Y', '010-6702-8237', 'test4', '초진', '2021-08-30', NULL, NULL, 'test4@gmail.com', 'test4', '2021-08-30', NULL, 'NULL', 1, NULL);
+INSERT INTO ucare.patient
+("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
+VALUES('test5', '여', '960803-2011111', 25, 'Y', '010-6702-8237', 'test5', '초진', '2021-08-30', NULL, NULL, 'test5@gmail.com', 'test5', '2021-08-30', NULL, 'NULL', 1, NULL);
+INSERT INTO ucare.patient
+("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
+VALUES('1', '여', '960803-2011111', 25, 'Y', '1', '11', '초진', '2021-08-30', NULL, NULL, '11@naver.com', '11', '2021-08-30', NULL, 'NULL', 1, NULL);
+INSERT INTO ucare.patient
+("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
+VALUES('111', '남', '111111-1111111', 109, 'Y', '010-6702-8237', '부산시 남구', '초진', '2021-08-30', NULL, NULL, '111@naver.com', '111', '2021-08-30', NULL, 'NULL', 1, NULL);
+INSERT INTO ucare.patient
+("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
+VALUES('22222', '여', '222222-2222222', 98, 'Y', '010-6702-8237', '부산시 남구', '초진', '2021-08-30', NULL, NULL, '222@daum.net', '222', '2021-08-30', NULL, 'NULL', 1, NULL);
+INSERT INTO ucare.patient
+("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
+VALUES('aaaa', '남', '960803-1111111', 25, 'Y', '010-6702-8237', '부산시 남구', '초진', '2021-08-30', NULL, NULL, '111@gmail.com', '111', '2021-08-30', NULL, 'NULL', 1, NULL);
+INSERT INTO ucare.patient
+("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
+VALUES('ccc', '남', '968031-1234222', 24, 'Y', '010-6702-8237', '부산시 남구', '초진', '2021-08-30', NULL, NULL, '222@nate.com', '222', '2021-08-30', NULL, 'NULL', 1, NULL);
+INSERT INTO ucare.patient
+("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
+VALUES('xxx', '여', '960803-2111111', 25, 'Y', '010-6702-8237', 'xxx', '초진', '2021-08-30', NULL, NULL, 'xxx@gmail.com', 'xxx', '2021-08-30', NULL, 'NULL', 1, NULL);
+INSERT INTO ucare.patient
+("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
+VALUES('test', '남', '960803-1******', 25, 'Y', '010-6702-8237', 'test', '초진', '2021-08-30', NULL, NULL, 'test@naver.com', 'test', '2021-08-30', '1', '2021-08-31', 1, NULL);
+INSERT INTO ucare.patient
+("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
+VALUES('111', '남', '878780-1******', 33, 'Y', '010-6702-8237', '서울 강남구 밤고개로 76-2 (수서동)', '재진', '2021-09-03', NULL, NULL, 'ㅁㅁ@hotmail.com', 'ㅁㅁ', '2021-09-03', '1', '2021-09-03', 1, 'ㅎㅎㅎ');
+INSERT INTO ucare.patient
+("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
+VALUES('ttt', '여', '510523-2839212', 70, 'Y', '010-1234-5677', 'tts', '재진', '2021-09-09', NULL, NULL, 'tts@naver.com', 'tts', '2021-09-09', NULL, 'NULL', 2, '');
+INSERT INTO ucare.patient
+("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
+VALUES('', '여', '', 2002, 'Y', '', '', '초진', '2021-09-16', NULL, NULL, '@', '', '2021-09-16', NULL, 'NULL', 2, '');
+INSERT INTO ucare.patient
+("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
+VALUES('또치', '여', '980808-2111111', 23, 'Y', '010-6702-8237', 'ee', '재진', '2021-09-16', NULL, NULL, 'wewe@gmail.com', 'sdsfsfs', '2021-09-16', NULL, 'NULL', 2, 'eww');
+INSERT INTO ucare.patient
+("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
+VALUES('', '여', '', 2002, 'Y', '', '', '초진', '2021-09-21', NULL, NULL, 'naver.com@', '', '2021-09-21', NULL, 'NULL', 2, '');
+INSERT INTO ucare.patient
+("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
+VALUES('ggg', '남', '111111-1111111', 109, 'Y', '010-6702-8237', '11', '초진', '2021-09-21', NULL, NULL, '111@naver.com', '11', '2021-09-21', NULL, 'NULL', 2, '11');
+INSERT INTO ucare.patient
+("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
+VALUES('', '여', '', 2002, 'Y', '', '', '초진', '2021-09-26', NULL, NULL, '', '', '2021-09-26', NULL, 'NULL', 2, '');
+INSERT INTO ucare.patient
+("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
+VALUES('원더우먼', '남', '980808-1029283', 23, 'Y', '010-1234-5677', 'ㅁㅁ', '초진', '2021-09-26', NULL, NULL, 'ksy96803@hanmail.net', 'ㅁㅁ', '2021-09-26', NULL, 'NULL', 2, 'ㅁㅁ');
+INSERT INTO ucare.patient
+("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
+VALUES('검은태양', '남', '111111-1111111', 109, 'Y', '010-6702-8237', '', '초진', '2021-09-26', NULL, NULL, '', '', '2021-09-26', NULL, 'NULL', 2, '');
+INSERT INTO ucare.patient
+("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
+VALUES('하하', '남', '710909-1111111', 50, 'Y', '010-1234-5677', 'ㅁㅁ', '초진', '2021-09-26', NULL, NULL, '', '', '2021-09-26', NULL, 'NULL', 2, 'ㅁㅁ');
+INSERT INTO ucare.patient
+("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
+VALUES('송강', '남', '960802-1111111', 25, 'Y', '010-6702-8237', 'ㅁ', '초진', '2021-09-26', NULL, NULL, 'aaa@anver.com', 'ㅁ', '2021-09-26', NULL, 'NULL', 2, 'ㅁ');
+INSERT INTO ucare.patient
+("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
+VALUES('송중기', '남', '880909-1111111', 33, 'Y', '010-1234-5677', '서울 강남구 가로수길 5 (신사동)', '초진', '2021-09-26', NULL, NULL, 'aaa@anver.com', '송중기', '2021-09-26', NULL, 'NULL', 2, '신사동');
+INSERT INTO ucare.patient
+("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
+VALUES('김선호', '남', '880909-1111111', 33, 'Y', '010-1234-5677', '서울 강남구 도산대로 402-2 (청담동)', '초진', '2021-09-26', NULL, NULL, 'aaa@naver.com', 'ㅁ', '2021-09-26', NULL, 'NULL', 2, '도산공원');
+INSERT INTO ucare.patient
+("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
+VALUES('미주', '여', '869898-2222222', 34, 'Y', '010-6702-8237', '서울 강남구 가로수길 5 (신사동)', '초진', '2021-09-27', NULL, NULL, 'ksy96803@hanmail.net', 'ㅁ', '2021-09-27', NULL, 'NULL', 2, '');
+INSERT INTO ucare.patient
+("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
+VALUES('백지영', '남', '710112-3222222', -50, 'Y', '010-1234-5677', '경기 성남시 분당구 대왕판교로 477 (판교동, 낙생고등학교)', '초진', '2021-09-27', NULL, NULL, 'ksy96803@hanmail.net', '', '2021-09-27', NULL, 'NULL', 2, '');
+INSERT INTO ucare.patient
+("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
+VALUES('수지', '여', '000430-2111111', 121, 'Y', '010-6702-8237', '부산 강서구 가달1로 7 (생곡동)', '초진', '2021-09-28', NULL, NULL, 'aaa@naver.com', 'ㅇㅇ', '2021-09-28', NULL, 'NULL', 2, 'ㅇㅇ');
+INSERT INTO ucare.patient
+("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
+VALUES('저스틴비버', '여', '000430-2111111', 121, 'Y', '111-1111-1111', 'ㅇㄴㅇ', '초진', '2021-09-28', NULL, NULL, 'aaa@nvaer.com', 'ㅇㅇㅇ', '2021-09-28', NULL, 'NULL', 2, 'ㅇㅇ');
+INSERT INTO ucare.patient
+("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
+VALUES('ㅁㅁ', '여', '000430-2111111', 121, 'Y', '111-1111-1111', 'ㅇㅇ', '초진', '2021-09-28', NULL, NULL, 'thdus96803@naver.com', 'ㅇㅇ', '2021-09-28', NULL, 'NULL', 2, 'ㅇㅇ');
+INSERT INTO ucare.patient
+("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
+VALUES('ㅁ', '여', '000430-2111111', 121, 'Y', '111-1111-1111', 'ㄷㅈㄹㄷ', '초진', '2021-09-28', NULL, NULL, '', 'ㅈㄷㄹㅈㄷㄹ', '2021-09-28', NULL, 'NULL', 2, 'ㄷㄹㄹ');
+INSERT INTO ucare.patient
+("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
+VALUES('aaa', '여', '000430-2111111', 121, 'Y', '111-1111-111111', 'aa', '초진', '2021-09-28', NULL, NULL, 'aaa@naver.com', 'aa', '2021-09-28', NULL, 'NULL', 2, 'aa');
+INSERT INTO ucare.patient
+("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
+VALUES('dddd', '남', '111111-1111111', 109, 'Y', '010-1234-5677', 'aaa', '초진', '2021-09-28', NULL, NULL, 'aaa@aver.com', 'aa', '2021-09-28', NULL, 'NULL', 2, 'aa');
+INSERT INTO ucare.patient
+("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
+VALUES('제시', '여', '881217-2111111', 32, 'Y', '111-1111-1111', 'ㅁㅁ', '초진', '2021-09-28', NULL, NULL, 'ksy96803@hanmail.net', 'ㅁㅁ', '2021-09-28', NULL, 'NULL', 2, 'ㅁㅁ');
+INSERT INTO ucare.patient
+("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
+VALUES('헤이', '여', '881217-2111111', 32, 'Y', '111-1111-111111', 'ㅇㅇ', '초진', '2021-09-28', NULL, NULL, 'aaa@naver.com', 'ㅇㅇ', '2021-09-28', NULL, 'NULL', 2, 'ㅇㅇ');
+INSERT INTO ucare.patient
+("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
+VALUES('111', '여', '881217-2111111', 32, 'N', '010-1234-5677', 'ㅇㅇ', '초진', '2021-09-28', NULL, NULL, 'aaa@naver.com', 'ㅇㅇ', '2021-09-28', NULL, 'NULL', 2, 'ㅇㅇ');
+INSERT INTO ucare.patient
+("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
+VALUES('33', '여', '881217-2111111', 32, 'Y', '010-1234-5677', 'ㅇㅇ', '초진', '2021-09-28', NULL, NULL, 'aaa@naver.com', 'ㅇㅇ', '2021-09-28', NULL, 'NULL', 2, 'ㅇㅇ');
+INSERT INTO ucare.patient
+("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
+VALUES('111', '여', '331111-2111111', 87, 'Y', '010-1234-5677', 'ㅁㅁ', '초진', '2021-09-28', NULL, NULL, 'aaa@naver.com', 'ㅁㅁ', '2021-09-28', NULL, 'NULL', 2, 'ㅁㅁ');
+INSERT INTO ucare.patient
+("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
+VALUES('222', '여', '331111-2111111', 87, 'Y', '010-1234-5677', 'ㅇㅇ', '초진', '2021-09-28', NULL, NULL, 'aaa@naver.com', 'ㅇㅇ', '2021-09-28', NULL, 'NULL', 2, 'ㅇㅇ');
+INSERT INTO ucare.patient
+("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
+VALUES('ㅁㅁ', '남', '551111-1111111', 65, 'Y', '010-1234-5677', '11', '초진', '2021-09-28', NULL, NULL, 'aaa@naver.com', 'ㅁㅁ', '2021-09-28', NULL, 'NULL', 2, '11');
+INSERT INTO ucare.patient
+("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
+VALUES('ㅎㅎ', '남', '551111-1111111', 65, 'Y', '010-1234-5677', 'ㅇㅇ', '초진', '2021-09-28', NULL, NULL, 'aaa@naver.com', 'ㅇㅇ', '2021-09-28', NULL, 'NULL', 2, 'ㅇㅇ');
+INSERT INTO ucare.patient
+("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
+VALUES('zz', '남', '661111-1111111', 54, 'Y', '111-1111-1111', 'aa', '초진', '2021-09-28', NULL, NULL, 'aaa@naver.com', 'aa', '2021-09-28', NULL, 'NULL', 2, 'aa');
+INSERT INTO ucare.patient
+("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
+VALUES('hh', '남', '661111-1111111', 54, 'Y', '010-1234-5677', 'hh', '초진', '2021-09-28', NULL, NULL, 'aaa@naver.com', 'hh', '2021-09-28', NULL, 'NULL', 2, 'hh');
+INSERT INTO ucare.patient
+("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
+VALUES('hh', '남', '661111-1111111', 54, 'Y', '010-1234-5677', 'dd', '초진', '2021-09-28', NULL, NULL, 'aaa@naver.com', 'dd', '2021-09-28', NULL, 'NULL', 2, 'dd');
+INSERT INTO ucare.patient
+("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
+VALUES('a', '남', '771111-1111111', 43, 'Y', '111-1111-1111', 'aa', '초진', '2021-09-28', NULL, NULL, 'aaa@naver.com', 'aa', '2021-09-28', NULL, 'NULL', 2, 'aa');
+INSERT INTO ucare.patient
+("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
+VALUES('gggggg', '남', '771111-1111111', 43, 'Y', '111-1111-1111', 'aa', '초진', '2021-09-28', NULL, NULL, 'ksy96803@hanmail.net', 'aa', '2021-09-28', NULL, 'NULL', 2, 'aaa');
+INSERT INTO ucare.patient
+("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
+VALUES('jjj', '남', '881111-1111111', 32, 'Y', '111-1111-1111', '1', '초진', '2021-09-28', NULL, NULL, '111@naver.com', '1', '2021-09-28', NULL, 'NULL', 2, '1');
+INSERT INTO ucare.patient
+("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
+VALUES('헤이', '여', '960803-2095419', 25, 'Y', '010-6702-8237', '부산 해운대구 센텀중앙로 42 (우동, 시청자미디어센터)', '초진', '2021-09-29', NULL, NULL, 'aaa@naver.com', 'ㅇㅇㅇㅇㅇ', '2021-09-29', NULL, 'NULL', 2, '하이');
+INSERT INTO ucare.patient
+("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
+VALUES('헤이', '여', '000430-4******', 21, 'Y', '010-1234-5677', '대구 달서구 야외음악당로 3 (성당동)', '초진', '2021-09-29', NULL, NULL, 'aaa@nvaer.com', 'ㅇㅇ', '2021-09-29', '2', '2021-09-29', 2, 'ㅇㅇㅇ');
+INSERT INTO ucare.patient
+("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
+VALUES('', '여', '', 2002, 'Y', '', '', '초진', '2021-09-30', NULL, NULL, '', '', '2021-09-30', NULL, 'NULL', 2, '');
+INSERT INTO ucare.patient
+("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
+VALUES('이용진', '남', '151515-1515151', 105, 'Y', '010-6702-8237', '', '초진', '2021-09-30', NULL, NULL, '', '', '2021-09-30', NULL, 'NULL', 2, '');
+INSERT INTO ucare.patient
+("name", gender, ssn, age, insurance_yn, tel_no, address, diagnosis_type, visit_date, height, weight, email, remark, ins_dt, upt_no, upt_dt, user_no, detail_address)
+VALUES('하마', '남', '141414-1414141', 106, 'Y', '010-1234-5678', '서울 강남구 학동로 지하 102 (논현동, 논현역)', '초진', '2021-09-30', NULL, NULL, 'hama@gmail.com', '하마 접수한당', '2021-09-30', NULL, 'NULL', 2, '하마동');
