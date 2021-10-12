@@ -15,6 +15,7 @@ npm i react-redux
 - React-redux를 통해 리액트에 사용
 
   
+  
 
 #### Redux를 왜 사용할까?
 
@@ -27,6 +28,7 @@ npm i react-redux
   - 리액트의 각 컴포넌트는 각각의 state를 가지고 있기 때문
 
 - 어딘가에 저장을 해놓고 필요한 컴포넌트에서 직접적으로 바로 데이터를 가져올 수 있는 방법이 필요해서 사용하는것이 redux
+
 
 
 
@@ -46,6 +48,7 @@ npm i react-redux
 
 
 
+
 ##### redux 폴더
 
 ```
@@ -61,6 +64,7 @@ redux
 	|--- rootReducer.js
 	|--- store.js
 ```
+
 
 
 
