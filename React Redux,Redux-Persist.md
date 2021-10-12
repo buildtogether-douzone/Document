@@ -51,13 +51,13 @@ npm i react-redux
 ```
 redux
 	|--- drawerManagement
-	|			|--- action.js
-	|			|--- reducer.js
-	|			|--- types.js
+	|	   |--- action.js
+	|	   |--- reducer.js
+	|	   |--- types.js
 	|--- viewManagement
-	|			|--- action.js
-	|			|--- reducer.js
-	|			|--- types.js
+	|	   |--- action.js
+	|	   |--- reducer.js
+	|	   |--- types.js
 	|--- rootReducer.js
 	|--- store.js
 ```
